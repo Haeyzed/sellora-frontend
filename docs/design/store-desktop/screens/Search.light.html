@@ -1,0 +1,861 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#F3F5FA}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.85}
+
+/* polish: tables keep cells on one line and scroll inside their card */
+td,th{white-space:nowrap}
+[style*="overflow-x: auto"]{position:relative}
+[style*="border-radius: 999px"]{white-space:nowrap}
+/* polish: status pills carry a shape, not only a colour */
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+</style>
+</head><body>
+
+<div style="position: relative; min-height: 100vh; height: auto; overflow: visible; display: flex; flex-wrap: wrap; align-content: flex-start; background: #F3F5FA; color: #0E1424; font-family: Inter, system-ui, sans-serif; font-size: 14px">
+
+
+<aside aria-label="Main menu" style="flex: 1 0 256px; max-width: 256px; min-width: 256px; background: #FFFFFF; display: flex; flex-direction: column; gap: 20px; padding: 20px 16px; box-sizing: border-box">
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; height: 40px; padding-left: 12px">
+<div style="width: 36px; height: 36px; border-radius: 10px; background: #3B5BFD; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; flex: 0 0 auto">S</div>
+
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; flex: 1 1 auto">Sellora</span>
+<button aria-label="Collapse sidebar" style="width: 32px; height: 32px; border-radius: 10px; border: none; background: #F2F4F9; color: #596276; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM9 3v18M16 9l-3 3 3 3"></path></svg>
+</button>
+
+</div>
+
+
+<button style="display: flex; align-items: center; gap: 10px; padding: 8px 10px 8px 12px; border-radius: 12px; border: none; background: #F2F4F9; color: #0E1424; cursor: pointer; text-align: left; font: inherit">
+<span style="width: 32px; height: 32px; border-radius: 10px; background: #FFF1D6; color: #8A5200; display: flex; align-items: center; justify-content: center; font-weight: 700">A</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ada's Fashion</span>
+<span style="font-size: 12px; color: #596276; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">ada-fashion.sellora.com</span>
+</span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+<nav style="display: flex; flex-direction: column; gap: 14px; flex: 1 1 auto">
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+
+
+
+<button type="button"  aria-expanded="true" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #0E1424; font: inherit; font-weight: 600; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Dashboard</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(180deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+<div role="group" aria-label="Dashboard" style="display: flex; flex-direction: column; gap: 2px; margin: 2px 0 6px 21px; padding-left: 10px; border-left: 1.5px solid #E8EBF2">
+
+<a href="Dashboard.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: #E9EDFF; color: #3B5BFD; font-size: 13px; font-weight: 600">
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Overview</span>
+
+</a>
+
+<a href="Alerts.dc.html" aria-current="false" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: transparent; color: #596276; font-size: 13px; font-weight: 500">
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Alerts</span>
+<span style="min-width: 20px; height: 20px; padding: 0 6px; box-sizing: border-box; border-radius: 10px; background: #3B5BFD; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">4</span>
+</a>
+
+</div>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #596276; padding: 0 12px 6px">Sell</span>
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M6 2h12l1 4H5zM5 6h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 10a3 3 0 0 0 6 0"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Orders</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Products</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Customers</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 2 2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Inventory</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+<a href="Promotions.dc.html" aria-label="Promotions" title="Promotions" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8zM7.5 7.5h.01"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Promotions</span>
+
+
+
+</a>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #596276; padding: 0 12px 6px">Fulfil</span>
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M16.5 9.4 7.5 4.2M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7zM3.3 7 12 12l8.7-5M12 22V12"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Shipping</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7zM5.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5M18.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Delivery</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #596276; padding: 0 12px 6px">Money</span>
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M2 5h20v14H2zM2 10h20"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Payments</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+<a href="Invoices.dc.html" aria-label="Invoices" title="Invoices" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M4 2v20l3-2 3 2 2-2 2 2 3-2 3 2V2l-3 2-3-2-2 2-2-2-3 2zM8 8h8M8 12h8M8 16h5"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Invoices</span>
+
+
+
+</a>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M19 5 5 19M6.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5M17.5 20a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Tax and currency</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #596276; padding: 0 12px 6px">Store</span>
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Storefront</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Team</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+<a href="Messaging.dc.html" aria-label="Messaging" title="Messaging" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM22 6l-10 7L2 6"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Messaging</span>
+
+
+
+</a>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M12 18v-6M9 15l3 3 3-3"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Data tools</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+</div>
+
+</nav>
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Settings</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+<a href="#" aria-label="Help" title="Help" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Help</span>
+
+
+
+</a>
+
+
+
+<a href="Profile.dc.html" aria-label="Your account: Ada Okafor, Owner" style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; padding: 10px 12px; margin-top: 8px; border-radius: 12px; background: #F2F4F9">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">AO</span>
+
+<span style="display: flex; flex-direction: column; min-width: 0">
+<span style="font-weight: 600">Ada Okafor</span>
+<span style="font-size: 12px; color: #596276">Owner</span>
+</span>
+
+</a>
+</div>
+</aside>
+
+
+<main style="flex: 999 1 560px; min-width: 0; padding: 20px 28px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">Good morning, Ada</h1>
+
+</div>
+<span style="color: #596276">Here is how Ada's Fashion is doing today.</span>
+</div>
+
+<a href="Search.dc.html" aria-label="Search, Control K" style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 8px 0 14px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); color: #596276; flex: 0 1 340px; min-width: 200px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<span style="flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Search orders, products, customers</span>
+<span aria-label="Keyboard shortcut Control K" style="display: flex; align-items: center; gap: 4px">
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #F2F4F9; box-shadow: inset 0 -2px 0 #D3D8E3, 0 0 0 1px #E4E8F0; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #596276">Ctrl</kbd>
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #F2F4F9; box-shadow: inset 0 -2px 0 #D3D8E3, 0 0 0 1px #E4E8F0; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #596276">K</kbd>
+</span>
+</a>
+<a href="Alerts.dc.html" aria-label="Alerts, 4 new" style="position: relative; width: 44px; height: 44px; border-radius: 12px; border: none; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); color: #0E1424; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: #B42318"></span>
+</a>
+
+
+<a href="ProductForm.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #3B5BFD; color: #FFFFFF; font-weight: 600">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
+Add product
+</a>
+
+</header>
+
+
+<section aria-label="Today's numbers" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px">
+
+<div style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="color: #596276; font-weight: 500">Net sales today</span>
+<span style="width: 34px; height: 34px; border-radius: 10px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v13H3zM3 7l3-4h12l3 4M16 14h.01"></path></svg>
+</span>
+</div>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">₦1,207,300</span>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 13px">
+<span style="padding: 3px 8px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-weight: 600">+12.4%</span>
+<span style="color: #596276">sales ₦1,245,800 less refunds</span>
+</div>
+</div>
+
+<div style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="color: #596276; font-weight: 500">Orders paid today</span>
+<span style="width: 34px; height: 34px; border-radius: 10px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12l1 4H5zM5 6h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 10a3 3 0 0 0 6 0"></path></svg>
+</span>
+</div>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">86</span>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 13px">
+<span style="padding: 3px 8px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-weight: 600">91 placed</span>
+<span style="color: #596276">214 units sold</span>
+</div>
+</div>
+
+<div style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="color: #596276; font-weight: 500">Average order value</span>
+<span style="width: 34px; height: 34px; border-radius: 10px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"></path></svg>
+</span>
+</div>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">₦14,486</span>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 13px">
+<span style="padding: 3px 8px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-weight: 600">+3.1%</span>
+<span style="color: #596276">today</span>
+</div>
+</div>
+
+<div style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="color: #596276; font-weight: 500">Orders waiting</span>
+<span style="width: 34px; height: 34px; border-radius: 10px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M12 6v6l4 2"></path></svg>
+</span>
+</div>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">23</span>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 13px">
+<span style="padding: 3px 8px; border-radius: 999px; background: #FFF1D6; color: #8A5200; font-weight: 600">3 refunds due</span>
+<span style="color: #596276">paid, not fulfilled</span>
+</div>
+</div>
+
+</section>
+
+<section style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 200px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Sales</h2>
+<span style="color: #596276; font-size: 13px">Net sales in NGN, Africa/Lagos time</span>
+</div>
+<div role="group" aria-label="Period" style="display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: #F2F4F9">
+<button style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: transparent; color: #596276; font: inherit; cursor: pointer">Today</button>
+<button style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: transparent; color: #596276; font: inherit; cursor: pointer">7 days</button>
+<button aria-pressed="true" style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: #FFFFFF; color: #0E1424; font: inherit; font-weight: 600; cursor: pointer; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05)">30 days</button>
+</div>
+</div>
+<div style="display: flex; align-items: baseline; gap: 10px">
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 600; letter-spacing: -0.02em">₦18,420,500</span>
+<span style="padding: 3px 8px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-size: 13px; font-weight: 600">+9.4%</span>
+</div>
+<div style="position: relative; height: 220px">
+<div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between">
+<div style="height: 1px; background: #E8EBF2"></div>
+<div style="height: 1px; background: #E8EBF2"></div>
+<div style="height: 1px; background: #E8EBF2"></div>
+<div style="height: 1px; background: #E8EBF2"></div>
+</div>
+<svg role="img" aria-label="Sales over the last 30 days, rising toward the end" viewBox="0 0 600 200" preserveAspectRatio="none" width="100%" height="220" style="position: absolute; inset: 0">
+<defs><linearGradient id="slAreaLight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B5BFD" stop-opacity="0.22"></stop><stop offset="1" stop-color="#3B5BFD" stop-opacity="0"></stop></linearGradient></defs><path d="M0,200 L0.0,171.7 L20.7,161.2 L41.4,166.5 L62.1,148.2 L82.8,153.4 L103.4,137.7 L124.1,142.9 L144.8,132.5 L165.5,135.1 L186.2,119.4 L206.9,124.6 L227.6,129.8 L248.3,114.2 L269.0,108.9 L289.7,116.8 L310.3,101.1 L331.0,95.8 L351.7,103.7 L372.4,88.0 L393.1,82.8 L413.8,72.3 L434.5,43.0 L455.2,74.9 L475.9,67.1 L496.6,56.6 L517.2,61.8 L537.9,46.2 L558.6,38.3 L579.3,48.8 L600.0,30.5 L600,200 Z" fill="url(#slAreaLight)"></path>
+<polyline points="0.0,171.7 20.7,161.2 41.4,166.5 62.1,148.2 82.8,153.4 103.4,137.7 124.1,142.9 144.8,132.5 165.5,135.1 186.2,119.4 206.9,124.6 227.6,129.8 248.3,114.2 269.0,108.9 289.7,116.8 310.3,101.1 331.0,95.8 351.7,103.7 372.4,88.0 393.1,82.8 413.8,72.3 434.5,43.0 455.2,74.9 475.9,67.1 496.6,56.6 517.2,61.8 537.9,46.2 558.6,38.3 579.3,48.8 600.0,30.5" fill="none" stroke="#3B5BFD" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></polyline>
+</svg>
+<div aria-hidden="true" style="position: absolute; left: 72.4%; top: 47px; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 0 0 3px #3B5BFD"></div>
+<div style="position: absolute; left: 72.4%; top: 0px; transform: translateX(-50%); padding: 10px 12px; border-radius: 12px; background: #0E1424; color: #FFFFFF; font-size: 12px; display: flex; flex-direction: column; gap: 2px; white-space: nowrap">
+<span style="opacity: .8">Thu, 6 Nov</span>
+<span style="font-weight: 700; font-size: 14px">₦812,300</span>
+<span>64 orders</span>
+</div>
+</div>
+<div aria-hidden="true" style="display: flex; justify-content: space-between; color: #596276; font-size: 12px">
+<span>15 Oct</span><span>22 Oct</span><span>29 Oct</span><span>5 Nov</span><span>14 Nov</span>
+</div>
+</div>
+
+<div style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Needs attention</h2>
+<a href="Alerts.dc.html" style="color: #3B5BFD; font-weight: 600; font-size: 13px">All alerts</a>
+</div>
+
+<a href="PaymentDetail.dc.html" style="display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: 12px; background: #F2F4F9">
+<span style="width: 36px; height: 36px; border-radius: 10px; background: #FFF1D6; color: #8A5200; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h20v14H2zM2 10h20"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600">Payment needs review</span>
+<span style="color: #596276; font-size: 13px">Order #1042 was paid ₦500 more than asked</span>
+</span>
+</a>
+
+<a href="RefundDetail.dc.html" style="display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: 12px; background: #F2F4F9">
+<span style="width: 36px; height: 36px; border-radius: 10px; background: #FDE8E6; color: #B42318; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600">Refund failed</span>
+<span style="color: #596276; font-size: 13px">Order #1031 · Flutterwave refused the refund</span>
+</span>
+</a>
+
+<a href="Inventory.dc.html" style="display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: 12px; background: #F2F4F9">
+<span style="width: 36px; height: 36px; border-radius: 10px; background: #E9EDFF; color: #2D46C9; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600">5 low, 9 out of stock</span>
+<span style="color: #596276; font-size: 13px">Ankara wrap dress, size M has 2 left</span>
+</span>
+</a>
+
+<a href="DriverDetail.dc.html" style="display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: 12px; background: #F2F4F9">
+<span style="width: 36px; height: 36px; border-radius: 10px; background: #FFF1D6; color: #8A5200; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h20v12H2zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600">Cash not handed over</span>
+<span style="color: #596276; font-size: 13px">Musa Danjuma holds ₦86,500 from 2 days</span>
+</span>
+</a>
+
+</div>
+</section>
+
+<section style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Recent orders</h2>
+<a href="Orders.dc.html" style="color: #3B5BFD; font-weight: 600; font-size: 13px">View all orders</a>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 620px; border-collapse: collapse">
+<thead>
+<tr style="color: #596276; font-size: 12px; text-align: left">
+<th style="font-weight: 500; padding: 8px 10px">Order</th>
+<th style="font-weight: 500; padding: 8px 10px">Customer</th>
+<th style="font-weight: 500; padding: 8px 10px">Placed</th>
+<th style="font-weight: 500; padding: 8px 10px">Payment</th>
+<th style="font-weight: 500; padding: 8px 10px">Fulfilment</th>
+<th style="font-weight: 500; padding: 8px 10px; text-align: right">Total</th>
+</tr>
+</thead>
+<tbody>
+
+<tr style="border-top: 1px solid #E8EBF2">
+<td style="padding: 12px 10px; font-weight: 600">#1048</td>
+<td style="padding: 12px 10px">
+<span style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 30px; height: 30px; border-radius: 50%; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">CE</span>
+Chioma Eze
+</span>
+</td>
+<td style="padding: 12px 10px; color: #596276">2 min ago</td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Paid</span></td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #E9EDFF; color: #2D46C9; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: info">Unfulfilled</span></td>
+<td style="padding: 12px 10px; text-align: right; font-weight: 600">₦42,500</td>
+</tr>
+
+<tr style="border-top: 1px solid #E8EBF2">
+<td style="padding: 12px 10px; font-weight: 600">#1047</td>
+<td style="padding: 12px 10px">
+<span style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 30px; height: 30px; border-radius: 50%; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">TB</span>
+Tunde Bakare
+</span>
+</td>
+<td style="padding: 12px 10px; color: #596276">18 min ago</td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #FFF1D6; color: #8A5200; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: warn">Unpaid</span></td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #E9EDFF; color: #2D46C9; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: info">Unfulfilled</span></td>
+<td style="padding: 12px 10px; text-align: right; font-weight: 600">₦18,900</td>
+</tr>
+
+<tr style="border-top: 1px solid #E8EBF2">
+<td style="padding: 12px 10px; font-weight: 600">#1046</td>
+<td style="padding: 12px 10px">
+<span style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 30px; height: 30px; border-radius: 50%; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">AM</span>
+Amina Musa
+</span>
+</td>
+<td style="padding: 12px 10px; color: #596276">1 hr ago</td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Paid</span></td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Fulfilled</span></td>
+<td style="padding: 12px 10px; text-align: right; font-weight: 600">₦67,200</td>
+</tr>
+
+<tr style="border-top: 1px solid #E8EBF2">
+<td style="padding: 12px 10px; font-weight: 600">#1045</td>
+<td style="padding: 12px 10px">
+<span style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 30px; height: 30px; border-radius: 50%; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">KO</span>
+Kelechi Obi
+</span>
+</td>
+<td style="padding: 12px 10px; color: #596276">2 hr ago</td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #FDE8E6; color: #B42318; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: danger">Paid · refund due</span></td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #EEF0F5; color: #475066; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: neutral">Unfulfilled</span></td>
+<td style="padding: 12px 10px; text-align: right; font-weight: 600">₦12,000</td>
+</tr>
+
+<tr style="border-top: 1px solid #E8EBF2">
+<td style="padding: 12px 10px; font-weight: 600">#1044</td>
+<td style="padding: 12px 10px">
+<span style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 30px; height: 30px; border-radius: 50%; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">YA</span>
+Yetunde Alabi
+</span>
+</td>
+<td style="padding: 12px 10px; color: #596276">3 hr ago</td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Paid</span></td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #FFF1D6; color: #8A5200; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: warn">Partially fulfilled</span></td>
+<td style="padding: 12px 10px; text-align: right; font-weight: 600">₦95,750</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+
+<div style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Top products</h2>
+<span style="color: #596276; font-size: 13px">Units, 30 days</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 12px; padding: 6px 0">
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">A</span>
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 auto; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ankara wrap dress</span>
+<span style="font-weight: 600">142</span>
+</span>
+<span style="height: 6px; border-radius: 3px; background: #F2F4F9; display: block">
+<span style="display: block; height: 6px; width: 100%; border-radius: 3px; background: #3B5BFD"></span>
+</span>
+</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 12px; padding: 6px 0">
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #FFF1D6; color: #8A5200; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">L</span>
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 auto; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Leather sandals</span>
+<span style="font-weight: 600">118</span>
+</span>
+<span style="height: 6px; border-radius: 3px; background: #F2F4F9; display: block">
+<span style="display: block; height: 6px; width: 83%; border-radius: 3px; background: #3B5BFD"></span>
+</span>
+</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 12px; padding: 6px 0">
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #E3F6EC; color: #0B6B40; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">L</span>
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 auto; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Linen kaftan</span>
+<span style="font-weight: 600">96</span>
+</span>
+<span style="height: 6px; border-radius: 3px; background: #F2F4F9; display: block">
+<span style="display: block; height: 6px; width: 68%; border-radius: 3px; background: #3B5BFD"></span>
+</span>
+</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 12px; padding: 6px 0">
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #FDE8E6; color: #B42318; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">B</span>
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 auto; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Beaded clutch</span>
+<span style="font-weight: 600">74</span>
+</span>
+<span style="height: 6px; border-radius: 3px; background: #F2F4F9; display: block">
+<span style="display: block; height: 6px; width: 52%; border-radius: 3px; background: #3B5BFD"></span>
+</span>
+</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 12px; padding: 6px 0">
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #EEF0F5; color: #475066; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">S</span>
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 auto; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Silk head wrap</span>
+<span style="font-weight: 600">61</span>
+</span>
+<span style="height: 6px; border-radius: 3px; background: #F2F4F9; display: block">
+<span style="display: block; height: 6px; width: 43%; border-radius: 3px; background: #3B5BFD"></span>
+</span>
+</span>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+<div style="position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 96px 24px 24px; box-sizing: border-box; background: rgba(9,13,24,0.48)">
+<a href="Dashboard.dc.html" aria-label="Close" style="position: absolute; inset: 0"></a>
+
+
+
+
+
+
+<section role="dialog" aria-modal="true" aria-label="Search" style="position: relative; width: 560px; max-width: 100%; box-sizing: border-box; padding: 24px; border-radius: 24px; background: #FFFFFF; box-shadow: 0 30px 80px rgba(0,0,0,0.28); display: flex; flex-direction: column; gap: 18px">
+
+<div style="display: flex; align-items: flex-start; gap: 14px">
+
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 auto; min-width: 0">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Search</h2>
+
+</div>
+
+<a href="Dashboard.dc.html" aria-label="Close" style="width: 40px; height: 40px; border-radius: 12px; background: #F2F4F9; color: #596276; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+</a>
+
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; overflow-y: auto; max-height: none">
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Search</span>
+<span style="box-sizing: border-box; border: 1px solid #7E879A; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; background: #F2F4F9; box-shadow: inset 0 0 0 2px #3B5BFD">
+
+<input type="text" value="chi" placeholder="" style="border: none; outline: none; background: transparent; color: #0E1424; font: inherit; flex: 1 1 auto; min-width: 0">
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+<span style="font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #596276">Customers</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<a href="CustomerDetail.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 6px 10px; border-radius: 12px; background: #E9EDFF; color: inherit">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 10px; background: #F2F4F9; color: #596276; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Chioma Eze</span>
+<span style="color: #596276; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">chioma.eze@example.com · 7 orders</span>
+</span>
+<span style="color: #596276; font-size: 12px; white-space: nowrap">Enter</span>
+</a>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+<span style="font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #596276">Orders</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<a href="Order.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 6px 10px; border-radius: 12px; background: transparent; color: inherit">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 10px; background: #F2F4F9; color: #596276; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12l1 4H5zM5 6h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 10a3 3 0 0 0 6 0"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">#1048 · Chioma Eze</span>
+<span style="color: #596276; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Paid · ₦42,500 · today</span>
+</span>
+
+</a>
+
+<a href="Order.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 6px 10px; border-radius: 12px; background: transparent; color: inherit">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 10px; background: #F2F4F9; color: #596276; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12l1 4H5zM5 6h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 10a3 3 0 0 0 6 0"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">#1031 · Chioma Eze</span>
+<span style="color: #596276; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Partially refunded · 2 weeks ago</span>
+</span>
+
+</a>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+<span style="font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #596276">Products</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<a href="ProductForm.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 6px 10px; border-radius: 12px; background: transparent; color: inherit">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 10px; background: #F2F4F9; color: #596276; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Chiffon scarf</span>
+<span style="color: #596276; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Accessories · 3 variants</span>
+</span>
+
+</a>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+
+</div>
+</section>
+
+</div>
+
+</div>
+</body></html>

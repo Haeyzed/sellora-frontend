@@ -1,0 +1,940 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#F3F5FA}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.85}
+
+/* polish: tables keep cells on one line and scroll inside their card */
+td,th{white-space:nowrap}
+[style*="overflow-x: auto"]{position:relative}
+[style*="border-radius: 999px"]{white-space:nowrap}
+/* polish: status pills carry a shape, not only a colour */
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+</style>
+</head><body>
+
+<div style="position: relative; min-height: 100vh; height: auto; overflow: visible; display: flex; flex-wrap: wrap; align-content: flex-start; background: #F3F5FA; color: #0E1424; font-family: Inter, system-ui, sans-serif; font-size: 14px">
+
+
+<aside aria-label="Main menu" style="flex: 1 0 256px; max-width: 256px; min-width: 256px; background: #FFFFFF; display: flex; flex-direction: column; gap: 20px; padding: 20px 16px; box-sizing: border-box">
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; height: 40px; padding-left: 12px">
+<div style="width: 36px; height: 36px; border-radius: 10px; background: #3B5BFD; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; flex: 0 0 auto">S</div>
+
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; flex: 1 1 auto">Sellora</span>
+<button aria-label="Collapse sidebar" style="width: 32px; height: 32px; border-radius: 10px; border: none; background: #F2F4F9; color: #596276; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM9 3v18M16 9l-3 3 3 3"></path></svg>
+</button>
+
+</div>
+
+
+<button style="display: flex; align-items: center; gap: 10px; padding: 8px 10px 8px 12px; border-radius: 12px; border: none; background: #F2F4F9; color: #0E1424; cursor: pointer; text-align: left; font: inherit">
+<span style="width: 32px; height: 32px; border-radius: 10px; background: #FFF1D6; color: #8A5200; display: flex; align-items: center; justify-content: center; font-weight: 700">A</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ada's Fashion</span>
+<span style="font-size: 12px; color: #596276; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">ada-fashion.sellora.com</span>
+</span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+<nav style="display: flex; flex-direction: column; gap: 14px; flex: 1 1 auto">
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Dashboard</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #596276; padding: 0 12px 6px">Sell</span>
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M6 2h12l1 4H5zM5 6h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 10a3 3 0 0 0 6 0"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Orders</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Products</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Customers</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 2 2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Inventory</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+<a href="Promotions.dc.html" aria-label="Promotions" title="Promotions" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8zM7.5 7.5h.01"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Promotions</span>
+
+
+
+</a>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #596276; padding: 0 12px 6px">Fulfil</span>
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M16.5 9.4 7.5 4.2M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7zM3.3 7 12 12l8.7-5M12 22V12"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Shipping</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7zM5.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5M18.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Delivery</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #596276; padding: 0 12px 6px">Money</span>
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M2 5h20v14H2zM2 10h20"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Payments</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+<a href="Invoices.dc.html" aria-label="Invoices" title="Invoices" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M4 2v20l3-2 3 2 2-2 2 2 3-2 3 2V2l-3 2-3-2-2 2-2-2-3 2zM8 8h8M8 12h8M8 16h5"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Invoices</span>
+
+
+
+</a>
+
+
+
+
+
+<button type="button"  aria-expanded="true" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #0E1424; font: inherit; font-weight: 600; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M19 5 5 19M6.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5M17.5 20a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Tax and currency</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(180deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+<div role="group" aria-label="Tax and currency" style="display: flex; flex-direction: column; gap: 2px; margin: 2px 0 6px 21px; padding-left: 10px; border-left: 1.5px solid #E8EBF2">
+
+<a href="Tax.dc.html" aria-current="false" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: transparent; color: #596276; font-size: 13px; font-weight: 500">
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Tax rates</span>
+
+</a>
+
+<a href="TaxClasses.dc.html" aria-current="false" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: transparent; color: #596276; font-size: 13px; font-weight: 500">
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Tax classes</span>
+
+</a>
+
+<a href="Currencies.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: #E9EDFF; color: #3B5BFD; font-size: 13px; font-weight: 600">
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Currencies</span>
+
+</a>
+
+<a href="PriceChecker.dc.html" aria-current="false" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: transparent; color: #596276; font-size: 13px; font-weight: 500">
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Price check</span>
+
+</a>
+
+</div>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #596276; padding: 0 12px 6px">Store</span>
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Storefront</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Team</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+<a href="Messaging.dc.html" aria-label="Messaging" title="Messaging" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM22 6l-10 7L2 6"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Messaging</span>
+
+
+
+</a>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M12 18v-6M9 15l3 3 3-3"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Data tools</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+</div>
+
+</nav>
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Settings</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+<a href="#" aria-label="Help" title="Help" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Help</span>
+
+
+
+</a>
+
+
+
+<a href="Profile.dc.html" aria-label="Your account: Ada Okafor, Owner" style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; padding: 10px 12px; margin-top: 8px; border-radius: 12px; background: #F2F4F9">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">AO</span>
+
+<span style="display: flex; flex-direction: column; min-width: 0">
+<span style="font-weight: 600">Ada Okafor</span>
+<span style="font-size: 12px; color: #596276">Owner</span>
+</span>
+
+</a>
+</div>
+</aside>
+
+
+<main style="flex: 999 1 560px; min-width: 0; padding: 20px 28px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px">
+
+<a href="Tax.dc.html" style="display: flex; align-items: center; gap: 6px; color: #596276; font-size: 13px; font-weight: 500">
+<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+Tax rates
+</a>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">Currencies</h1>
+
+</div>
+<span style="color: #596276">Your base currency is NGN. Prices convert at the applied rate.</span>
+</div>
+
+<a href="Search.dc.html" aria-label="Search, Control K" style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 8px 0 14px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); color: #596276; flex: 0 1 340px; min-width: 200px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<span style="flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Search orders, products, customers</span>
+<span aria-label="Keyboard shortcut Control K" style="display: flex; align-items: center; gap: 4px">
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #F2F4F9; box-shadow: inset 0 -2px 0 #D3D8E3, 0 0 0 1px #E4E8F0; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #596276">Ctrl</kbd>
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #F2F4F9; box-shadow: inset 0 -2px 0 #D3D8E3, 0 0 0 1px #E4E8F0; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #596276">K</kbd>
+</span>
+</a>
+<a href="Alerts.dc.html" aria-label="Alerts, 4 new" style="position: relative; width: 44px; height: 44px; border-radius: 12px; border: none; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); color: #0E1424; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: #B42318"></span>
+</a>
+
+
+<a href="AddCurrency.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #3B5BFD; color: #FFFFFF; font-weight: 600">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
+Add currency
+</a>
+
+</header>
+
+
+
+
+
+
+
+
+<section style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<div role="tablist" aria-label="Currencies" style="display: flex; flex-wrap: wrap; overflow-x: auto; max-width: 100%; gap: 4px; padding: 4px; border-radius: 12px; background: #F2F4F9">
+
+<button role="tab" aria-selected="true"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: #FFFFFF; color: #0E1424; font: inherit; font-weight: 600; cursor: pointer; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">All<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #E9EDFF; color: #3B5BFD; font-weight: 600">4</span></button>
+
+</div>
+<span style="flex: 1 1 auto"></span>
+
+
+</div>
+
+
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 760px; border-collapse: collapse">
+<thead>
+<tr style="color: #596276; font-size: 12px">
+<th scope="col" style="width: 36px; padding: 8px 10px; text-align: left">
+<input type="checkbox" aria-label="Select all" style="width: 16px; height: 16px; accent-color: #3B5BFD">
+</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: left">Currency</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: left">Market rate</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: left">Manual rate</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: left">Margin</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: left">Applied rate</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: left">Status</th>
+
+<th scope="col" style="width: 40px"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></th>
+</tr>
+</thead>
+<tbody>
+
+<tr style="border-top: 1px solid #E8EBF2; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #3B5BFD"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">U</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">USD</span>
+<span style="font-size: 12px; color: #596276; white-space: nowrap">US dollar</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #596276; white-space: nowrap">1 USD = ₦1,512.40</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #0E1424; white-space: nowrap">—</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #0E1424; white-space: nowrap">2%</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 600; color: #0E1424; white-space: nowrap">₦1,542.65</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Offered</span>
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="CurrenciesMenu.dc.html" aria-label="Actions for USD" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #596276; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #E8EBF2; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #3B5BFD"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #FFF1D6; color: #8A5200; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">G</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">GHS</span>
+<span style="font-size: 12px; color: #596276; white-space: nowrap">Ghanaian cedi</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #596276; white-space: nowrap">1 GHS = ₦98.10</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #0E1424; white-space: nowrap">₦100.00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #0E1424; white-space: nowrap">0%</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 600; color: #0E1424; white-space: nowrap">₦100.00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #E3F6EC; color: #0B6B40; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Offered</span>
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="CurrenciesMenu.dc.html" aria-label="Actions for GHS" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #596276; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #E8EBF2; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #3B5BFD"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #E3F6EC; color: #0B6B40; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">G</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">GBP</span>
+<span style="font-size: 12px; color: #596276; white-space: nowrap">Pound sterling</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #596276; white-space: nowrap">1 GBP = ₦1,960.22</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #0E1424; white-space: nowrap">—</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #0E1424; white-space: nowrap">2%</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 600; color: #0E1424; white-space: nowrap">₦1,999.42</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #FFF1D6; color: #8A5200; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: warn">Stale rate</span>
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="CurrenciesMenu.dc.html" aria-label="Actions for GBP" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #596276; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #E8EBF2; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #3B5BFD"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #FDE8E6; color: #B42318; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">K</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">KES</span>
+<span style="font-size: 12px; color: #596276; white-space: nowrap">Kenyan shilling</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #596276; white-space: nowrap">1 KES = ₦11.70</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #0E1424; white-space: nowrap">—</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #0E1424; white-space: nowrap">0%</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 600; color: #0E1424; white-space: nowrap">₦11.70</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="SetRate.dc.html" style="display: block; color: inherit">
+
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #EEF0F5; color: #475066; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: neutral">Off</span>
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="CurrenciesMenu.dc.html" aria-label="Actions for KES" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #596276; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 4px">
+<span style="color: #596276; font-size: 13px; flex: 1 1 auto">Page 1 of 1 · rates older than 24 hours are marked stale</span>
+
+<label style="display: flex; align-items: center; gap: 8px; color: #596276; font-size: 13px">
+Rows
+<select style="height: 36px; padding: 0 8px; border-radius: 10px; border: 1px solid #7E879A; background: #F2F4F9; color: #0E1424; font: inherit">
+<option>25</option><option>50</option><option>100</option>
+</select>
+</label>
+
+<nav aria-label="Pages" style="display: flex; align-items: center; gap: 6px">
+
+<button aria-label="First page" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #F2F4F9; color: #0E1424; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">«</button>
+
+<button aria-label="Previous page" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #F2F4F9; color: #0E1424; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">‹</button>
+
+<button aria-label="Page 1" aria-current="page" aria-disabled="false" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #3B5BFD; color: #FFFFFF; font: inherit; font-weight: 600; cursor: pointer">1</button>
+
+<button aria-label="Next page" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #F2F4F9; color: #0E1424; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">›</button>
+
+<button aria-label="Last page, 1" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #F2F4F9; color: #0E1424; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">»</button>
+
+</nav>
+</div>
+</section>
+
+
+
+
+
+</main>
+
+
+<div style="position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 96px 24px 24px; box-sizing: border-box; background: rgba(9,13,24,0.48)">
+<a href="Currencies.dc.html" aria-label="Close" style="position: absolute; inset: 0"></a>
+
+
+
+
+
+
+<section role="dialog" aria-modal="true" aria-label="USD rate" style="position: relative; width: 560px; max-width: 100%; box-sizing: border-box; padding: 24px; border-radius: 24px; background: #FFFFFF; box-shadow: 0 30px 80px rgba(0,0,0,0.28); display: flex; flex-direction: column; gap: 18px">
+
+<div style="display: flex; align-items: flex-start; gap: 14px">
+
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 auto; min-width: 0">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">USD rate</h2>
+<span style="color: #596276; line-height: 1.5">Leave empty to follow the market rate.</span>
+</div>
+
+<a href="Currencies.dc.html" aria-label="Close" style="width: 40px; height: 40px; border-radius: 12px; background: #F2F4F9; color: #596276; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+</a>
+
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; overflow-y: auto; max-height: none">
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Manual rate</span>
+<span style="box-sizing: border-box; border: 1px solid #7E879A; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; background: #F2F4F9; box-shadow: none">
+<span style="color: #596276; font-weight: 600">₦</span>
+<input type="text" value="1,540.00" placeholder="" style="border: none; outline: none; background: transparent; color: #0E1424; font: inherit; flex: 1 1 auto; min-width: 0">
+<span style="color: #596276">per $1</span>
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Margin</span>
+<span style="box-sizing: border-box; border: 1px solid #7E879A; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; background: #F2F4F9; box-shadow: none">
+
+<input type="text" value="2" placeholder="" style="border: none; outline: none; background: transparent; color: #0E1424; font: inherit; flex: 1 1 auto; min-width: 0">
+<span style="color: #596276">%</span>
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 12px; background: #F2F4F9">
+
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #596276">Market rate</span>
+<span style="font-weight: 600; text-align: right">₦1,512.40</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #596276">Applied rate</span>
+<span style="font-weight: 600; text-align: right">₦1,570.80</span>
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+<a href="Currencies.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #F2F4F9; color: #0E1424; font-weight: 600">Use market rate</a><a href="Currencies.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #3B5BFD; color: #FFFFFF; font-weight: 600">Save rate</a>
+</div>
+</section>
+
+</div>
+
+</div>
+</body></html>

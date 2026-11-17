@@ -1,0 +1,547 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#07090F}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.85}
+
+/* polish: tables keep cells on one line and scroll inside their card */
+td,th{white-space:nowrap}
+[style*="overflow-x: auto"]{position:relative}
+[style*="border-radius: 999px"]{white-space:nowrap}
+/* polish: status pills carry a shape, not only a colour */
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+</style>
+</head><body>
+
+<div style="position: relative; min-height: 100vh; height: auto; overflow: visible; display: flex; flex-wrap: wrap; align-content: flex-start; background: #07090F; color: #F2F4F8; font-family: Inter, system-ui, sans-serif; font-size: 14px">
+
+
+<aside aria-label="Main menu" style="flex: 1 0 256px; max-width: 256px; min-width: 256px; background: #0C0F17; display: flex; flex-direction: column; gap: 20px; padding: 20px 16px; box-sizing: border-box">
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; height: 40px; padding-left: 12px">
+<div style="width: 36px; height: 36px; border-radius: 10px; background: #6B86FF; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; flex: 0 0 auto">S</div>
+
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; flex: 1 1 auto">Sellora</span>
+<button aria-label="Collapse sidebar" style="width: 32px; height: 32px; border-radius: 10px; border: none; background: #1A1E2A; color: #9AA3B5; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM9 3v18M16 9l-3 3 3 3"></path></svg>
+</button>
+
+</div>
+
+
+<button style="display: flex; align-items: center; gap: 10px; padding: 8px 10px 8px 12px; border-radius: 12px; border: none; background: #1A1E2A; color: #F2F4F8; cursor: pointer; text-align: left; font: inherit">
+<span style="width: 32px; height: 32px; border-radius: 10px; background: #2E2410; color: #FBBF24; display: flex; align-items: center; justify-content: center; font-weight: 700">S</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Platform admin</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">admin.sellora.com</span>
+</span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+<nav style="display: flex; flex-direction: column; gap: 14px; flex: 1 1 auto">
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+
+
+<a href="Dashboard.dc.html" aria-label="Dashboard" title="Dashboard" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #9AA3B5; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Dashboard</span>
+
+
+
+</a>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #9AA3B5; padding: 0 12px 6px">Merchants</span>
+
+
+
+<a href="Stores.dc.html" aria-label="Stores" title="Stores" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #9AA3B5; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Stores</span>
+
+<span style="min-width: 22px; height: 22px; padding: 0 7px; box-sizing: border-box; border-radius: 10px; background: #6B86FF; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">3</span>
+
+</a>
+
+
+
+
+<a href="ExchangeRates.dc.html" aria-label="Exchange rates" title="Exchange rates" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #9AA3B5; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Exchange rates</span>
+
+
+
+</a>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #9AA3B5; padding: 0 12px 6px">Platform</span>
+
+
+
+<a href="LegalDocs.dc.html" aria-label="Legal documents" title="Legal documents" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #9AA3B5; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Legal documents</span>
+
+
+
+</a>
+
+
+
+
+
+<button type="button"  aria-expanded="true" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #F2F4F8; font: inherit; font-weight: 600; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Team</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(180deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+<div role="group" aria-label="Team" style="display: flex; flex-direction: column; gap: 2px; margin: 2px 0 6px 21px; padding-left: 10px; border-left: 1.5px solid #222735">
+
+<a href="Admins.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: #1B2246; color: #6B86FF; font-size: 13px; font-weight: 600">
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Admins</span>
+
+</a>
+
+<a href="Invitations.dc.html" aria-current="false" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: transparent; color: #9AA3B5; font-size: 13px; font-weight: 500">
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Invitations</span>
+<span style="min-width: 20px; height: 20px; padding: 0 6px; box-sizing: border-box; border-radius: 10px; background: #6B86FF; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">1</span>
+</a>
+
+<a href="Roles.dc.html" aria-current="false" style="display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: transparent; color: #9AA3B5; font-size: 13px; font-weight: 500">
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Roles</span>
+
+</a>
+
+</div>
+
+
+
+</div>
+
+</nav>
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+
+
+<a href="#" aria-label="Help" title="Help" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #9AA3B5; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Help</span>
+
+
+
+</a>
+
+
+
+<a href="Profile.dc.html" aria-label="Your account: Bayo Adeyemi, Super admin" style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; padding: 10px 12px; margin-top: 8px; border-radius: 12px; background: #1A1E2A">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #1B2246; color: #6B86FF; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">BA</span>
+
+<span style="display: flex; flex-direction: column; min-width: 0">
+<span style="font-weight: 600">Bayo Adeyemi</span>
+<span style="font-size: 12px; color: #9AA3B5">Super admin</span>
+</span>
+
+</a>
+</div>
+</aside>
+
+
+<main style="flex: 999 1 560px; min-width: 0; padding: 20px 28px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px">
+
+<a href="Admins.dc.html" style="display: flex; align-items: center; gap: 6px; color: #9AA3B5; font-size: 13px; font-weight: 500">
+<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+Platform team
+</a>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">Kunle Ajayi</h1>
+
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #10291C; color: #4ADE80; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Active</span>
+
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1B2246; color: #9DB0FF; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: info">Two-factor on</span>
+
+</div>
+<span style="color: #9AA3B5">kunle@sellora.com · joined June 2025</span>
+</div>
+
+<a href="Search.dc.html" aria-label="Search, Control K" style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 8px 0 14px; border-radius: 12px; background: #12151E; box-shadow: none; color: #9AA3B5; flex: 0 1 340px; min-width: 200px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<span style="flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Search stores and admins</span>
+<span aria-label="Keyboard shortcut Control K" style="display: flex; align-items: center; gap: 4px">
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #1A1E2A; box-shadow: inset 0 -2px 0 #05070C, 0 0 0 1px #2A3040; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #9AA3B5">Ctrl</kbd>
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #1A1E2A; box-shadow: inset 0 -2px 0 #05070C, 0 0 0 1px #2A3040; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #9AA3B5">K</kbd>
+</span>
+</a>
+<a href="Stores.dc.html" aria-label="Alerts, 4 new" style="position: relative; width: 44px; height: 44px; border-radius: 12px; border: none; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: #F87171"></span>
+</a>
+
+
+<a href="ResetAdminTwoFactor.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; font-weight: 600">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a4 4 0 1 1-3.9 5H3v3h3v3h3v-3h2.1A4 4 0 0 1 15 7zM16 10h.01"></path></svg>
+Reset two-factor
+</a>
+
+<a href="DeactivateAdmin.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; font-weight: 600">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+Deactivate
+</a>
+
+<a href="ChangeAdminRoles.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #6B86FF; color: #FFFFFF; font-weight: 600">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg>
+Change roles
+</a>
+
+</header>
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Roles</h2>
+<span style="color: #9AA3B5; font-size: 13px">Permissions add up across roles and direct permissions.</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1B2246; color: #9DB0FF; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: info">Operations</span>
+</div>
+
+
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+<a href="ChangeAdminRoles.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #6B86FF; color: #FFFFFF; font-weight: 600">Change roles</a>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+</section>
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">What Kunle can do, and why</h2>
+<span style="color: #9AA3B5; font-size: 13px">3 of 5 permissions</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-direction: column; gap: 10px; min-width: 0">
+
+<div style="overflow-x: visible; margin: 0 -2px; padding: 0 2px">
+<table style="width: 100%; min-width: 480px; border-collapse: collapse; font-size: 14px">
+<thead>
+<tr style="color: #9AA3B5; font-size: 12px; text-align: left">
+<th scope="col" style="font-weight: 500; padding: 8px 12px; white-space: nowrap">Permission</th><th scope="col" style="font-weight: 500; padding: 8px 12px; white-space: nowrap">From</th>
+
+</tr>
+</thead>
+<tbody>
+
+<tr style="border-top: 1px solid #222735">
+<td style="padding: 12px; vertical-align: middle">View stores</td><td style="padding: 12px; vertical-align: middle">Operations role</td>
+
+</tr>
+
+<tr style="border-top: 1px solid #222735">
+<td style="padding: 12px; vertical-align: middle">Manage stores: suspend, close, retry setup</td><td style="padding: 12px; vertical-align: middle">Operations role</td>
+
+</tr>
+
+<tr style="border-top: 1px solid #222735">
+<td style="padding: 12px; vertical-align: middle">Export store data</td><td style="padding: 12px; vertical-align: middle">Direct permission</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+<a href="EditAdminPermissions.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #1A1E2A; color: #F2F4F8; font-weight: 600">Direct permissions</a>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+</section>
+
+</div>
+
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Account</h2>
+<span style="color: #9AA3B5; font-size: 13px"></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #9AA3B5">Two-factor</span>
+<span style="font-weight: 600; text-align: right">On</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #9AA3B5">Last signed in</span>
+<span style="font-weight: 600; text-align: right">Yesterday, 18:40</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #9AA3B5">Language</span>
+<span style="font-weight: 600; text-align: right">English</span>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Privacy</h2>
+<span style="color: #9AA3B5; font-size: 13px">For a request from this person.</span>
+</div>
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<a href="#" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #1A1E2A; color: #F2F4F8; font-weight: 600">Download personal data</a><a href="EraseAdmin.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #DC2626; color: #FFFFFF; font-weight: 600">Erase personal data</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; gap: 10px; padding: 12px 14px; border-radius: 12px; background: #2E2410; color: #FBBF24; line-height: 1.45">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 1px"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M12 16v-4M12 8h.01"></path></svg>
+<span>Only a deactivated admin can be erased.</span>
+</div>
+
+
+
+
+</section>
+
+</div>
+</div>
+
+
+
+</main>
+
+
+<div style="position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 96px 24px 24px; box-sizing: border-box; background: rgba(0,0,0,0.66)">
+<a href="AdminDetail.dc.html" aria-label="Close" style="position: absolute; inset: 0"></a>
+
+
+
+
+
+
+<section role="alertdialog" aria-modal="true" aria-label="Deactivate Kunle Ajayi?" style="position: relative; width: 460px; max-width: 100%; box-sizing: border-box; padding: 24px; border-radius: 24px; background: #12151E; box-shadow: 0 30px 80px rgba(0,0,0,0.28); display: flex; flex-direction: column; gap: 18px">
+
+<div style="display: flex; align-items: flex-start; gap: 14px">
+
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #2E2410; color: #FBBF24; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+</span>
+
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 auto; min-width: 0">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Deactivate Kunle Ajayi?</h2>
+<span style="color: #9AA3B5; line-height: 1.5">They are signed out everywhere and cannot sign in.</span>
+</div>
+
+</div>
+
+<ul style="margin: 0; padding: 12px 14px 12px 32px; border-radius: 12px; background: #1A1E2A; display: flex; flex-direction: column; gap: 6px; line-height: 1.45">
+<li>Their history in the activity log stays.</li><li>Their open invitations are cancelled.</li><li>You can reactivate them later.</li>
+</ul>
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+<a href="AdminDetail.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #1A1E2A; color: #F2F4F8; font-weight: 600">Cancel</a><a href="AdminDetail.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #DC2626; color: #FFFFFF; font-weight: 600">Deactivate</a>
+</div>
+</section>
+
+</div>
+
+</div>
+</body></html>
