@@ -1,0 +1,920 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#07090F}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.85}
+
+/* polish: tables keep cells on one line and scroll inside their card */
+td,th{white-space:nowrap}
+[style*="overflow-x: auto"]{position:relative}
+[style*="border-radius: 999px"]{white-space:nowrap}
+/* polish: status pills carry a shape, not only a colour */
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+</style>
+</head><body>
+
+<div style="position: relative; min-height: 100vh; height: auto; overflow: visible; display: flex; flex-wrap: wrap; align-content: flex-start; background: #07090F; color: #F2F4F8; font-family: Inter, system-ui, sans-serif; font-size: 14px">
+
+
+<aside aria-label="Main menu" style="flex: 1 0 256px; max-width: 256px; min-width: 256px; background: #0C0F17; display: flex; flex-direction: column; gap: 20px; padding: 20px 16px; box-sizing: border-box">
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; height: 40px; padding-left: 12px">
+<div style="width: 36px; height: 36px; border-radius: 10px; background: #6B86FF; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; flex: 0 0 auto">S</div>
+
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; flex: 1 1 auto">Sellora</span>
+<button aria-label="Collapse sidebar" style="width: 32px; height: 32px; border-radius: 10px; border: none; background: #1A1E2A; color: #9AA3B5; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM9 3v18M16 9l-3 3 3 3"></path></svg>
+</button>
+
+</div>
+
+
+<button style="display: flex; align-items: center; gap: 10px; padding: 8px 10px 8px 12px; border-radius: 12px; border: none; background: #1A1E2A; color: #F2F4F8; cursor: pointer; text-align: left; font: inherit">
+<span style="width: 32px; height: 32px; border-radius: 10px; background: #2E2410; color: #FBBF24; display: flex; align-items: center; justify-content: center; font-weight: 700">S</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Platform admin</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">admin.sellora.com</span>
+</span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+<nav style="display: flex; flex-direction: column; gap: 14px; flex: 1 1 auto">
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+
+
+<a href="Dashboard.dc.html" aria-label="Dashboard" title="Dashboard" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #9AA3B5; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Dashboard</span>
+
+
+
+</a>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #9AA3B5; padding: 0 12px 6px">Merchants</span>
+
+
+
+<a href="Stores.dc.html" aria-label="Stores" title="Stores" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #9AA3B5; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Stores</span>
+
+<span style="min-width: 22px; height: 22px; padding: 0 7px; box-sizing: border-box; border-radius: 10px; background: #6B86FF; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">3</span>
+
+</a>
+
+
+
+
+<a href="ExchangeRates.dc.html" aria-label="Exchange rates" title="Exchange rates" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: #1B2246; color: #6B86FF; font-weight: 600">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Exchange rates</span>
+
+
+
+</a>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #9AA3B5; padding: 0 12px 6px">Platform</span>
+
+
+
+<a href="LegalDocs.dc.html" aria-label="Legal documents" title="Legal documents" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #9AA3B5; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Legal documents</span>
+
+
+
+</a>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #9AA3B5; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Team</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+</div>
+
+</nav>
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+
+
+<a href="#" aria-label="Help" title="Help" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #9AA3B5; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Help</span>
+
+
+
+</a>
+
+
+
+<a href="Profile.dc.html" aria-label="Your account: Bayo Adeyemi, Super admin" style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; padding: 10px 12px; margin-top: 8px; border-radius: 12px; background: #1A1E2A">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #1B2246; color: #6B86FF; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">BA</span>
+
+<span style="display: flex; flex-direction: column; min-width: 0">
+<span style="font-weight: 600">Bayo Adeyemi</span>
+<span style="font-size: 12px; color: #9AA3B5">Super admin</span>
+</span>
+
+</a>
+</div>
+</aside>
+
+
+<main style="flex: 999 1 560px; min-width: 0; padding: 20px 28px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">Exchange rates</h1>
+
+</div>
+<span style="color: #9AA3B5">Market rates from Open Exchange Rates, fetched every hour. Stores can set their own.</span>
+</div>
+
+<a href="Search.dc.html" aria-label="Search, Control K" style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 8px 0 14px; border-radius: 12px; background: #12151E; box-shadow: none; color: #9AA3B5; flex: 0 1 340px; min-width: 200px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<span style="flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Search stores and admins</span>
+<span aria-label="Keyboard shortcut Control K" style="display: flex; align-items: center; gap: 4px">
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #1A1E2A; box-shadow: inset 0 -2px 0 #05070C, 0 0 0 1px #2A3040; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #9AA3B5">Ctrl</kbd>
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #1A1E2A; box-shadow: inset 0 -2px 0 #05070C, 0 0 0 1px #2A3040; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #9AA3B5">K</kbd>
+</span>
+</a>
+<a href="Stores.dc.html" aria-label="Alerts, 4 new" style="position: relative; width: 44px; height: 44px; border-radius: 12px; border: none; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: #F87171"></span>
+</a>
+
+
+</header>
+
+
+
+
+
+
+
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<div role="tablist" aria-label="Exchange rates" style="display: flex; flex-wrap: wrap; overflow-x: auto; max-width: 100%; gap: 4px; padding: 4px; border-radius: 12px; background: #1A1E2A">
+
+<button role="tab" aria-selected="true"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: #12151E; color: #F2F4F8; font: inherit; font-weight: 600; cursor: pointer; box-shadow: none; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">All<span style="display: none; font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #1B2246; color: #6B86FF; font-weight: 600"></span></button>
+
+</div>
+<span style="flex: 1 1 auto"></span>
+
+<label style="display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 12px; border-radius: 12px; box-sizing: border-box; border: 1px solid #626B81; background: #1A1E2A; color: #9AA3B5; flex: 0 1 260px; min-width: 160px">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Filter this list</span>
+<input type="search" placeholder="Currency code, for example NGN" style="border: none; outline: none; background: transparent; color: #F2F4F8; font: inherit; flex: 1 1 auto; min-width: 0">
+</label>
+
+
+</div>
+
+
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 760px; border-collapse: collapse">
+<thead>
+<tr style="color: #9AA3B5; font-size: 12px">
+<th scope="col" style="width: 36px; padding: 8px 10px; text-align: left">
+<input type="checkbox" aria-label="Select all" style="width: 16px; height: 16px; accent-color: #6B86FF">
+</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: left">Currency</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: left">Source</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: right">Units per USD</th>
+
+<th scope="col" style="font-weight: 500; padding: 8px 10px; text-align: right">Fetched</th>
+
+<th scope="col" style="width: 40px"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></th>
+</tr>
+</thead>
+<tbody>
+
+<tr style="border-top: 1px solid #222735; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #6B86FF"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #1B2246; color: #6B86FF; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">N</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">NGN</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap">Nigerian naira</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Open Exchange Rates</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 600; color: #F2F4F8; white-space: nowrap">1,545.2034</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Today, 10:00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="RatesMenu.dc.html" aria-label="Actions for NGN" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: #1A1E2A">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #6B86FF"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #2E2410; color: #FBBF24; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">G</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">GHS</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap">Ghanaian cedi</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Open Exchange Rates</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 600; color: #F2F4F8; white-space: nowrap">15.4210</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Today, 10:00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="RatesMenu.dc.html" aria-label="Actions for GHS" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #6B86FF; background: #1B2246">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #6B86FF"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #10291C; color: #4ADE80; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">K</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">KES</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap">Kenyan shilling</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Open Exchange Rates</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 600; color: #F2F4F8; white-space: nowrap">129.3000</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Today, 10:00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="RatesMenu.dc.html" aria-label="Actions for KES" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #6B86FF"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #331516; color: #F87171; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">Z</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">ZAR</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap">South African rand</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Open Exchange Rates</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 600; color: #F2F4F8; white-space: nowrap">18.4127</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Today, 10:00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="RatesMenu.dc.html" aria-label="Actions for ZAR" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #6B86FF"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #1F2431; color: #C3CAD8; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">X</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">XOF</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap">West African CFA franc</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Open Exchange Rates</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 600; color: #F2F4F8; white-space: nowrap">605.8012</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Today, 10:00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="RatesMenu.dc.html" aria-label="Actions for XOF" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #6B86FF"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #1B2246; color: #6B86FF; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">E</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">EGP</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap">Egyptian pound</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Open Exchange Rates</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 600; color: #F2F4F8; white-space: nowrap">48.9530</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Today, 10:00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="RatesMenu.dc.html" aria-label="Actions for EGP" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #6B86FF"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #2E2410; color: #FBBF24; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">E</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">EUR</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap">Euro</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Open Exchange Rates</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 600; color: #F2F4F8; white-space: nowrap">0.9235</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Today, 10:00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="RatesMenu.dc.html" aria-label="Actions for EUR" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #6B86FF"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #10291C; color: #4ADE80; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">G</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">GBP</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap">British pound</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Open Exchange Rates</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 600; color: #F2F4F8; white-space: nowrap">0.7894</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Today, 10:00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="RatesMenu.dc.html" aria-label="Actions for GBP" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox" aria-label="Select row" style="width: 16px; height: 16px; accent-color: #6B86FF"></td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+
+
+
+<span style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: #331516; color: #F87171; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">U</span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap">USD</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap">US dollar</span>
+</span>
+</span>
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: left; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-start">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Open Exchange Rates</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 600; color: #F2F4F8; white-space: nowrap">1.0000</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 10px; text-align: right; vertical-align: middle">
+<a href="#" style="display: block; color: inherit">
+
+<span style="display: flex; flex-direction: column; gap: 2px; align-items: flex-end">
+<span style="font-weight: 400; color: #9AA3B5; white-space: nowrap">Today, 10:00</span>
+
+</span>
+
+
+
+
+</a>
+</td>
+
+<td style="padding: 12px 6px; text-align: right">
+<a href="RatesMenu.dc.html" aria-label="Actions for USD" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 4px">
+<span style="color: #9AA3B5; font-size: 13px; flex: 1 1 auto">25 per page. Rates are units of each currency per 1 USD; stores convert through USD.</span>
+
+<label style="display: flex; align-items: center; gap: 8px; color: #9AA3B5; font-size: 13px">
+Rows
+<select style="height: 36px; padding: 0 8px; border-radius: 10px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit">
+<option>25</option><option>50</option><option>100</option>
+</select>
+</label>
+
+<nav aria-label="Pages, newest first" style="display: flex; align-items: center; gap: 6px">
+
+<button aria-label="Newest" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">«</button>
+
+<button aria-label="Previous page" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">‹</button>
+
+<button aria-label="Next page" aria-current="false" aria-disabled="false" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; font-size: 16px; line-height: 1; padding: 0">›</button>
+
+</nav>
+</div>
+</section>
+
+
+
+
+
+</main>
+
+
+<div style="position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; padding: 0; box-sizing: border-box; background: transparent">
+<a href="ExchangeRates.dc.html" aria-label="Close" style="position: absolute; inset: 0"></a>
+
+
+
+
+<div role="menu" aria-label="NGN" style="position: absolute; top: 340px; right: 54px; width: 248px; box-sizing: border-box; padding: 6px; border-radius: 16px; background: #12151E; box-shadow: 0 0 0 1px #222735, 0 18px 40px rgba(9,13,24,0.18); display: flex; flex-direction: column; gap: 2px">
+
+
+
+
+<a role="menuitem" href="Stores.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 10px; color: #F2F4F8; font-weight: 500">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"></path></svg>
+<span style="flex: 1 1 auto">Stores selling in NGN</span>
+
+</a>
+
+
+
+
+<a role="menuitem" href="#" style="display: flex; align-items: center; gap: 12px; min-height: 40px; padding: 0 12px; border-radius: 10px; color: #F2F4F8; font-weight: 500">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M9 9h11v11H9zM5 15H4V4h11v1"></path></svg>
+<span style="flex: 1 1 auto">Copy rate</span>
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+</body></html>

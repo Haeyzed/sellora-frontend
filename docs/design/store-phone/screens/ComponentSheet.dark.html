@@ -1,0 +1,336 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#07090F}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+@keyframes slShimmer{0%{background-position:-400px 0}100%{background-position:400px 0}}
+</style>
+</head><body>
+
+<div style="box-sizing: border-box; width: 100%; padding: 16px; background: #07090F; color: #F2F4F8; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 14px; display: flex; flex-direction: column; gap: 20px">
+
+<header style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #9AA3B5">Sellora · Admin · Dark</span>
+<h1 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Components</h1>
+<p style="margin: 0; color: #9AA3B5; max-width: 640px">Every control in each state it can be in. Build these first, then the screens. Colours, sizes and radii come from tokens.css.</p>
+</header>
+
+<section aria-labelledby="h-buttons" style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<h2 id="h-buttons" style="margin: 0; font-size: 19px; font-weight: 600">Buttons</h2>
+<div style="overflow-x: auto; position: relative">
+<table style="border-collapse: separate; border-spacing: 12px 10px; margin: -10px -12px">
+<thead>
+<tr style="color: #9AA3B5; font-size: 12px; text-align: left">
+<th style="font-weight: 500"></th>
+<th style="font-weight: 500; white-space: nowrap">Default</th><th style="font-weight: 500; white-space: nowrap">Hover</th><th style="font-weight: 500; white-space: nowrap">Focus</th><th style="font-weight: 500; white-space: nowrap">Disabled</th><th style="font-weight: 500; white-space: nowrap">Loading</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<th scope="row" style="font-weight: 600; text-align: left; white-space: nowrap; font-size: 13px">Primary</th>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #6B86FF; color: #FFFFFF; border: none">Save</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #8299FF; color: #FFFFFF; border: none">Save</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #6B86FF; color: #FFFFFF; border: none; box-shadow: 0 0 0 3px rgba(107,134,255,0.45)">Save</button></td>
+
+<td><button type="button" disabled style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #6B86FF; color: #FFFFFF; border: none; opacity: 0.45; cursor: not-allowed">Save</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #6B86FF; color: #FFFFFF; border: none; opacity: 0.85; cursor: progress"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-6.2-8.56"></path></svg>Saving</button></td>
+
+</tr>
+
+<tr>
+<th scope="row" style="font-weight: 600; text-align: left; white-space: nowrap; font-size: 13px">Secondary</th>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #12151E; color: #F2F4F8; border: 1px solid #222735">Save</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #1A1E2A; color: #F2F4F8; border: 1px solid #222735">Save</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #12151E; color: #F2F4F8; border: 1px solid #222735; box-shadow: 0 0 0 3px rgba(107,134,255,0.45)">Save</button></td>
+
+<td><button type="button" disabled style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #12151E; color: #F2F4F8; border: 1px solid #222735; opacity: 0.45; cursor: not-allowed">Save</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #12151E; color: #F2F4F8; border: 1px solid #222735; opacity: 0.85; cursor: progress"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-6.2-8.56"></path></svg>Saving</button></td>
+
+</tr>
+
+<tr>
+<th scope="row" style="font-weight: 600; text-align: left; white-space: nowrap; font-size: 13px">Soft</th>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #1A1E2A; color: #F2F4F8; border: none">Save</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #222735; color: #F2F4F8; border: none">Save</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #1A1E2A; color: #F2F4F8; border: none; box-shadow: 0 0 0 3px rgba(107,134,255,0.45)">Save</button></td>
+
+<td><button type="button" disabled style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #1A1E2A; color: #F2F4F8; border: none; opacity: 0.45; cursor: not-allowed">Save</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #1A1E2A; color: #F2F4F8; border: none; opacity: 0.85; cursor: progress"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-6.2-8.56"></path></svg>Saving</button></td>
+
+</tr>
+
+<tr>
+<th scope="row" style="font-weight: 600; text-align: left; white-space: nowrap; font-size: 13px">Danger</th>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #DC2626; color: #FFFFFF; border: none">Delete</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #EF4444; color: #FFFFFF; border: none">Delete</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #DC2626; color: #FFFFFF; border: none; box-shadow: 0 0 0 3px rgba(107,134,255,0.45)">Delete</button></td>
+
+<td><button type="button" disabled style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #DC2626; color: #FFFFFF; border: none; opacity: 0.45; cursor: not-allowed">Delete</button></td>
+
+<td><button type="button"  style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #DC2626; color: #FFFFFF; border: none; opacity: 0.85; cursor: progress"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-6.2-8.56"></path></svg>Saving</button></td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<span style="margin: 0; font-size: 12px; color: #9AA3B5">Sizes</span>
+<button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 12px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #6B86FF; color: #FFFFFF; border: none; font-size: 13px">Small · 36px</button>
+<button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #6B86FF; color: #FFFFFF; border: none">Default · 44px</button>
+<button type="button" aria-label="Add" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0; width: 44px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #1A1E2A; color: #F2F4F8; border: none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></button>
+<span style="margin: 0; font-size: 12px; color: #9AA3B5">Icon-only buttons need an aria-label.</span>
+</div>
+</section>
+
+<section aria-labelledby="h-inputs" style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<h2 id="h-inputs" style="margin: 0; font-size: 19px; font-weight: 600">Inputs</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); gap: 16px">
+
+<label style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 600"><span>Store name</span><span style="color: #9AA3B5; font-weight: 500">Empty</span></span>
+<input type="text" value="" placeholder="e.g. Ada's Fashion"  aria-invalid="false" style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none">
+<span style="font-size: 12px; color: #9AA3B5">Shown to shoppers.</span>
+</label>
+
+<label style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 600"><span>Store name</span><span style="color: #9AA3B5; font-weight: 500">Filled</span></span>
+<input type="text" value="Ada's Fashion" placeholder=""  aria-invalid="false" style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none">
+
+</label>
+
+<label style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 600"><span>Store name</span><span style="color: #9AA3B5; font-weight: 500">Focus</span></span>
+<input type="text" value="Ada's Fash" placeholder=""  aria-invalid="false" style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none; border-color: #6B86FF; box-shadow: 0 0 0 3px rgba(107,134,255,0.45)">
+
+</label>
+
+<label style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 600"><span>Email</span><span style="color: #9AA3B5; font-weight: 500">Error</span></span>
+<input type="text" value="ada@" placeholder=""  aria-invalid="true" style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none; border-color: #F87171; box-shadow: 0 0 0 1px #F87171">
+<span style="font-size: 12px; color: #F87171">Enter a full email address, like ada@example.com.</span>
+</label>
+
+<label style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 600"><span>Currency</span><span style="color: #9AA3B5; font-weight: 500">Disabled</span></span>
+<input type="text" value="NGN" placeholder="" disabled aria-invalid="false" style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none; opacity: 0.55; cursor: not-allowed">
+<span style="font-size: 12px; color: #9AA3B5">Set when the store was created.</span>
+</label>
+
+<label style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span style="font-size: 13px; font-weight: 600">Select</span>
+<select style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none"><option>Nigeria</option><option>Ghana</option><option>Kenya</option></select>
+</label>
+<label style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<span style="font-size: 13px; font-weight: 600">Search</span>
+<span style="box-sizing: border-box; border: 1px solid #626B81; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 12px; border-radius: 12px; background: #1A1E2A; color: #9AA3B5">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<input type="search" placeholder="Order number, name or email" style="border: none; outline: none; background: transparent; color: #F2F4F8; font: inherit; flex: 1 1 auto; min-width: 0">
+</span>
+</label>
+<label style="display: flex; flex-direction: column; gap: 8px; min-width: 0; grid-column: 1 / -1">
+<span style="font-size: 13px; font-weight: 600">Text area</span>
+<textarea rows="3" style="box-sizing: border-box; width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; resize: vertical">Asked for gift wrap on every order.</textarea>
+</label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: center">
+<label style="display: flex; align-items: center; gap: 10px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #6B86FF; margin: 0">Checkbox on</label>
+<label style="display: flex; align-items: center; gap: 10px"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #6B86FF; margin: 0">Checkbox off</label>
+<label style="display: flex; align-items: center; gap: 10px"><input type="radio" name="cs-radio" checked style="width: 18px; height: 18px; accent-color: #6B86FF; margin: 0">Radio on</label>
+<label style="display: flex; align-items: center; gap: 10px"><input type="radio" name="cs-radio" style="width: 18px; height: 18px; accent-color: #6B86FF; margin: 0">Radio off</label>
+<span style="display: flex; align-items: center; gap: 10px"><button type="button" role="switch" aria-checked="true" aria-label="Switch on" style="position: relative; width: 44px; height: 26px; border-radius: 999px; border: none; padding: 0; cursor: pointer; background: #6B86FF"><span style="position: absolute; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,0.25); left: 21px"></span></button>Switch on</span>
+<span style="display: flex; align-items: center; gap: 10px"><button type="button" role="switch" aria-checked="false" aria-label="Switch off" style="position: relative; width: 44px; height: 26px; border-radius: 999px; border: none; padding: 0; cursor: pointer; background: #3A4152"><span style="position: absolute; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,0.25); left: 3px"></span></button>Switch off</span>
+</div>
+</section>
+
+<section aria-labelledby="h-badges" style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<h2 id="h-badges" style="margin: 0; font-size: 19px; font-weight: 600">Status badges</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #10291C; color: #4ADE80; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Paid</span><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #10291C; color: #4ADE80; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Delivered</span><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #2E2410; color: #FBBF24; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: warn">Pending</span><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #2E2410; color: #FBBF24; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: warn">Low stock</span><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #331516; color: #F87171; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: danger">Failed</span><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #331516; color: #F87171; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: danger">PIN locked</span><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1B2246; color: #9DB0FF; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: info">Processing</span><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1B2246; color: #9DB0FF; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: info">New</span><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1F2431; color: #C3CAD8; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: neutral">Draft</span><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1F2431; color: #C3CAD8; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: neutral">Archived</span>
+</div>
+<p style="margin: 0; font-size: 12px; color: #9AA3B5">Success, warning and danger badges carry a shape (✓ ! ✕) as well as a colour, so they still read for colour-blind users. Info and neutral need no shape.</p>
+</section>
+
+<section aria-labelledby="h-table" style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<h2 id="h-table" style="margin: 0; font-size: 19px; font-weight: 600">Table rows</h2>
+<div style="overflow-x: auto; position: relative">
+<table style="width: 100%; min-width: 560px; border-collapse: collapse; font-size: 13px">
+<thead>
+<tr style="color: #9AA3B5; font-size: 12px; text-align: left">
+<th style="padding: 8px 10px; width: 36px"><input type="checkbox" aria-label="Select all" style="width: 16px; height: 16px; accent-color: #6B86FF; margin: 0"></th>
+<th style="padding: 8px 10px; font-weight: 500">Order</th>
+<th style="padding: 8px 10px; font-weight: 500">Customer</th>
+<th style="padding: 8px 10px; font-weight: 500">Payment</th>
+<th style="padding: 8px 10px; font-weight: 500; text-align: right">Total</th>
+<th style="padding: 8px 10px; font-weight: 500">Row state</th>
+</tr>
+</thead>
+<tbody>
+
+<tr style="border-top: 1px solid #222735; background: transparent">
+<td style="padding: 12px 10px"><input type="checkbox"  aria-label="Select #1048" style="width: 16px; height: 16px; accent-color: #6B86FF; margin: 0"></td>
+<td style="padding: 12px 10px; font-weight: 600">#1048</td>
+<td style="padding: 12px 10px">Chioma Eze</td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #10291C; color: #4ADE80; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Paid</span></td>
+<td style="padding: 12px 10px; text-align: right; font-weight: 600">₦42,500</td>
+<td style="padding: 12px 10px; color: #9AA3B5">Default</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: #171B26">
+<td style="padding: 12px 10px"><input type="checkbox"  aria-label="Select #1047" style="width: 16px; height: 16px; accent-color: #6B86FF; margin: 0"></td>
+<td style="padding: 12px 10px; font-weight: 600">#1047</td>
+<td style="padding: 12px 10px">Tunde Bakare</td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #2E2410; color: #FBBF24; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: warn">Unpaid</span></td>
+<td style="padding: 12px 10px; text-align: right; font-weight: 600">₦18,900</td>
+<td style="padding: 12px 10px; color: #9AA3B5">Hover</td>
+</tr>
+
+<tr style="border-top: 1px solid #222735; background: #161C33">
+<td style="padding: 12px 10px"><input type="checkbox" checked aria-label="Select #1046" style="width: 16px; height: 16px; accent-color: #6B86FF; margin: 0"></td>
+<td style="padding: 12px 10px; font-weight: 600">#1046</td>
+<td style="padding: 12px 10px">Amina Musa</td>
+<td style="padding: 12px 10px"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #331516; color: #F87171; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: danger">Refund failed</span></td>
+<td style="padding: 12px 10px; text-align: right; font-weight: 600">₦61,000</td>
+<td style="padding: 12px 10px; color: #9AA3B5">Selected</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+<p style="margin: 0; font-size: 12px; color: #9AA3B5">Cells stay on one line. When the table is wider than its card it scrolls inside the card, never the page.</p>
+</section>
+
+<section aria-labelledby="h-feedback" style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<h2 id="h-feedback" style="margin: 0; font-size: 19px; font-weight: 600">Notes, toasts and loading</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); gap: 12px">
+
+<div role="note" style="display: flex; gap: 10px; padding: 12px 14px; border-radius: 12px; background: #1B2246; color: #9DB0FF; font-size: 13px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M12 16v-4M12 8h.01M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"></path></svg>
+<span><b style="font-weight: 600">Heads up.</b> Prices include VAT in this region.</span>
+</div>
+
+<div role="note" style="display: flex; gap: 10px; padding: 12px 14px; border-radius: 12px; background: #10291C; color: #4ADE80; font-size: 13px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M20 6 9 17l-5-5"></path></svg>
+<span><b style="font-weight: 600">Saved.</b> Your changes are live on the storefront.</span>
+</div>
+
+<div role="note" style="display: flex; gap: 10px; padding: 12px 14px; border-radius: 12px; background: #2E2410; color: #FBBF24; font-size: 13px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+<span><b style="font-weight: 600">Low stock.</b> Ankara wrap dress, size M has 2 left.</span>
+</div>
+
+<div role="note" style="display: flex; gap: 10px; padding: 12px 14px; border-radius: 12px; background: #331516; color: #F87171; font-size: 13px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM15 9l-6 6M9 9l6 6"></path></svg>
+<span><b style="font-weight: 600">Refund failed.</b> Flutterwave refused the refund for #1031.</span>
+</div>
+
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div role="status" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px 12px 16px; border-radius: 16px; background: #F2F4F8; color: #0E1424; font-size: 13px; box-shadow: 0 8px 28px rgba(9,13,24,0.22); max-width: 360px">
+<span style="flex: 1 1 auto"><b style="font-weight: 600">Order #1048 marked as paid.</b> The customer gets an email.</span>
+<button type="button" style="height: 32px; padding: 0 10px; border-radius: 10px; border: none; background: transparent; color: inherit; font: inherit; font-weight: 600; text-decoration: underline">Undo</button>
+</div>
+<div aria-hidden="true" style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #12151E; box-shadow: inset 0 0 0 1px #222735">
+<span style="height: 14px; width: 40%; border-radius: 8px; background: linear-gradient(90deg, #1A1E2A 0%, #262B3A 50%, #1A1E2A 100%); background-size: 800px 100%; animation: slShimmer 1.4s linear infinite"></span><span style="height: 12px; width: 90%; border-radius: 8px; background: linear-gradient(90deg, #1A1E2A 0%, #262B3A 50%, #1A1E2A 100%); background-size: 800px 100%; animation: slShimmer 1.4s linear infinite"></span><span style="height: 12px; width: 75%; border-radius: 8px; background: linear-gradient(90deg, #1A1E2A 0%, #262B3A 50%, #1A1E2A 100%); background-size: 800px 100%; animation: slShimmer 1.4s linear infinite"></span><span style="height: 36px; width: 100%; border-radius: 8px; background: linear-gradient(90deg, #1A1E2A 0%, #262B3A 50%, #1A1E2A 100%); background-size: 800px 100%; animation: slShimmer 1.4s linear infinite"></span>
+</div>
+<div style="flex: 1 1 260px; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 28px 16px; border-radius: 16px; background: #1A1E2A; text-align: center">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9AA3B5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M5 7l1 13h12l1-13M9 7V4h6v3"></path></svg>
+<span style="font-weight: 600">No orders yet</span>
+<span style="color: #9AA3B5; font-size: 13px">Orders show here as soon as a shopper checks out.</span>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="h-dialogs" style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<h2 id="h-dialogs" style="margin: 0; font-size: 19px; font-weight: 600">Dialogs</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; border-radius: 16px; background: rgba(0,0,0,0.66)">
+
+<div role="dialog" aria-label="Mark #1048 as paid?" style="flex: 1 1 300px; max-width: 440px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 20px; background: #12151E; box-shadow: 0 20px 60px rgba(9,13,24,0.28)">
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #1B2246; color: #6B86FF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 19px; font-weight: 600">Mark #1048 as paid?</span><span style="color: #9AA3B5">Use this when the money reached your account outside Sellora.</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px"><button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #1A1E2A; color: #F2F4F8; border: none">Cancel</button><button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #6B86FF; color: #FFFFFF; border: none">Mark as paid</button></div>
+</div>
+
+<div role="dialog" aria-label="Move Leather sandals to trash?" style="flex: 1 1 300px; max-width: 440px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 20px; background: #12151E; box-shadow: 0 20px 60px rgba(9,13,24,0.28)">
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #331516; color: #F87171; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"></path></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 19px; font-weight: 600">Move Leather sandals to trash?</span><span style="color: #9AA3B5">It leaves the storefront now. You can restore it for 30 days.</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px"><button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #1A1E2A; color: #F2F4F8; border: none">Cancel</button><button type="button" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; font: inherit; font-weight: 600; white-space: nowrap; cursor: pointer; background: #DC2626; color: #FFFFFF; border: none">Move to trash</button></div>
+</div>
+
+</div>
+</section>
+
+<section aria-labelledby="h-nav" style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<h2 id="h-nav" style="margin: 0; font-size: 19px; font-weight: 600">Navigation</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+<div role="tablist" aria-label="Tabs example" style="display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: #1A1E2A">
+<button type="button" role="tab" aria-selected="true" style="height: 36px; padding: 0 14px; border-radius: 10px; border: none; font: inherit; font-weight: 600; cursor: pointer; background: #12151E; color: #F2F4F8">All</button><button type="button" role="tab" aria-selected="false" style="height: 36px; padding: 0 14px; border-radius: 10px; border: none; font: inherit; font-weight: 600; cursor: pointer; background: transparent; color: #9AA3B5">Open</button><button type="button" role="tab" aria-selected="false" style="height: 36px; padding: 0 14px; border-radius: 10px; border: none; font: inherit; font-weight: 600; cursor: pointer; background: transparent; color: #9AA3B5">Unpaid</button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; color: #9AA3B5">Page lists (with a total)</span>
+<nav aria-label="Pagination" style="display: flex; align-items: center; gap: 6px">
+<a href="#" aria-current="false" aria-label="Previous page" style="min-width: 36px; height: 36px; box-sizing: border-box; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; text-decoration: none; font-weight: 600; background: #1A1E2A; color: #F2F4F8">‹</a><a href="#" aria-current="false" aria-label="Page 1" style="min-width: 36px; height: 36px; box-sizing: border-box; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; text-decoration: none; font-weight: 600; background: #1A1E2A; color: #F2F4F8">1</a><a href="#" aria-current="page" aria-label="Page 2" style="min-width: 36px; height: 36px; box-sizing: border-box; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; text-decoration: none; font-weight: 600; background: #6B86FF; color: #FFFFFF">2</a><a href="#" aria-current="false" aria-label="Page 3" style="min-width: 36px; height: 36px; box-sizing: border-box; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; text-decoration: none; font-weight: 600; background: #1A1E2A; color: #F2F4F8">3</a><a href="#" aria-current="false" aria-label="Next page" style="min-width: 36px; height: 36px; box-sizing: border-box; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; text-decoration: none; font-weight: 600; background: #1A1E2A; color: #F2F4F8">›</a>
+</nav>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; color: #9AA3B5">Cursor lists (no total)</span>
+<nav aria-label="Pages, newest first" style="display: flex; align-items: center; gap: 6px">
+<a href="#" aria-label="Newest" aria-disabled="true" style="min-width: 36px; height: 36px; box-sizing: border-box; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 16px; background: #1A1E2A; color: #F2F4F8; opacity: 0.45">«</a><a href="#" aria-label="Previous page" aria-disabled="true" style="min-width: 36px; height: 36px; box-sizing: border-box; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 16px; background: #1A1E2A; color: #F2F4F8; opacity: 0.45">‹</a><a href="#" aria-label="Next page" aria-disabled="false" style="min-width: 36px; height: 36px; box-sizing: border-box; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 16px; background: #1A1E2A; color: #F2F4F8">›</a>
+</nav>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; color: #9AA3B5">Storefront grids</span>
+<button type="button" style="height: 44px; padding: 0 18px; border-radius: 12px; border: 1px solid #222735; background: #12151E; color: #F2F4F8; font: inherit; font-weight: 600; cursor: pointer">Load more</button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; width: 240px; padding: 10px; border-radius: 16px; background: #0C0F17; box-shadow: inset 0 0 0 1px #222735">
+
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 10px; border-radius: 12px; text-decoration: none; font-weight: 600; background: transparent; color: #F2F4F8"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"></path></svg><span style="flex: 1 1 auto">Dashboard</span><span style="font-size: 11px; color: #9AA3B5">Default</span></a>
+
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 10px; border-radius: 12px; text-decoration: none; font-weight: 600; background: #1A1E2A; color: #F2F4F8"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"></path></svg><span style="flex: 1 1 auto">Orders</span><span style="font-size: 11px; color: #9AA3B5">Hover</span></a>
+
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 10px; border-radius: 12px; text-decoration: none; font-weight: 600; background: #1B2246; color: #6B86FF"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"></path></svg><span style="flex: 1 1 auto">Products</span><span style="font-size: 11px; color: #9AA3B5">Active</span></a>
+
+</div>
+</div>
+</section>
+
+<section aria-labelledby="h-grad" style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<h2 id="h-grad" style="margin: 0; font-size: 19px; font-weight: 600">Gradients</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px">
+
+<div style="display: flex; flex-direction: column; gap: 8px"><span aria-hidden="true" style="height: 84px; border-radius: 16px; background: linear-gradient(150deg, #2B3A8F 0%, #1B2246 65%, #121833 100%)"></span><span style="font-size: 13px; font-weight: 600">Brand panel</span><span style="font-size: 12px; color: #9AA3B5">Sign-in and sign-up side panel</span></div>
+
+<div style="display: flex; flex-direction: column; gap: 8px"><span aria-hidden="true" style="height: 84px; border-radius: 16px; background: linear-gradient(180deg, rgba(107,134,255,0.34) 0%, rgba(59,91,253,0) 100%)"></span><span style="font-size: 13px; font-weight: 600">Chart fill</span><span style="font-size: 12px; color: #9AA3B5">Area under a line chart</span></div>
+
+<div style="display: flex; flex-direction: column; gap: 8px"><span aria-hidden="true" style="height: 84px; border-radius: 16px; background: linear-gradient(140deg, #2B3A8F 0%, #1B2246 100%)"></span><span style="font-size: 13px; font-weight: 600">Highlight card</span><span style="font-size: 12px; color: #9AA3B5">Driver next stop, upgrade prompts, store ready</span></div>
+
+<div style="display: flex; flex-direction: column; gap: 8px"><span aria-hidden="true" style="height: 84px; border-radius: 16px; background: linear-gradient(135deg, #1B2246 0%, #2E2410 100%)"></span><span style="font-size: 13px; font-weight: 600">Placeholder</span><span style="font-size: 12px; color: #9AA3B5">Avatars and missing product images</span></div>
+
+<div style="display: flex; flex-direction: column; gap: 8px"><span aria-hidden="true" style="height: 84px; border-radius: 16px; background: linear-gradient(90deg, #1A1E2A 0%, #262B3A 50%, #1A1E2A 100%)"></span><span style="font-size: 13px; font-weight: 600">Skeleton shimmer</span><span style="font-size: 12px; color: #9AA3B5">Loading placeholders, animated</span></div>
+
+</div>
+<p style="margin: 0; font-size: 12px; color: #9AA3B5">Use gradients only here. Buttons, tables, the sidebar, badges, inputs and ordinary cards stay flat.</p>
+</section>
+
+</div>
+</body></html>
