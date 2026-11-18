@@ -1,0 +1,177 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#F3F5FA}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit}
+td,th{white-space:nowrap}
+[style*="border-radius: 999px"]{white-space:nowrap}
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+[role="dialog"] > *,nav[aria-label="Docs"] > *{flex-shrink:0}
+mark{background:transparent;font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+</style>
+</head><body>
+
+<div style="box-sizing: border-box; width: 100%; min-height: 900px; background: #F3F5FA; color: #0E1424; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 16px; line-height: 1.55; position: relative; ">
+
+
+<header style="position: sticky; top: 0; z-index: 2; background: rgba(255,255,255,0.94); box-shadow: inset 0 -1px 0 #E8EBF2">
+<div style="box-sizing: border-box; max-width: 1440px; margin: 0 auto; height: 68px; padding: 0 32px; display: flex; align-items: center; gap: 16px">
+
+<a href="#" style="display: flex; align-items: center; gap: 10px; text-decoration: none; flex: none">
+<span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 10px; background: #3B5BFD; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700">S</span>
+<span style="font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 600; font-size: 19px">Sellora <span style="color: #596276; font-weight: 500">Docs</span></span>
+</a>
+
+<nav aria-label="Docs sections" style="display: flex; gap: 4px; margin-left: 12px">
+<a href="#" aria-current="page" style="height: 36px; padding: 0 12px; display: inline-flex; align-items: center; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 600; background: #F2F4F9; color: #0E1424">Guides</a><a href="#" aria-current="false" style="height: 36px; padding: 0 12px; display: inline-flex; align-items: center; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 600; background: transparent; color: #596276">Modules</a><a href="#" aria-current="false" style="height: 36px; padding: 0 12px; display: inline-flex; align-items: center; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 600; background: transparent; color: #596276">Integrations</a><a href="#" aria-current="false" style="height: 36px; padding: 0 12px; display: inline-flex; align-items: center; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 600; background: transparent; color: #596276">What's new</a>
+</nav>
+<span style="flex: 1 1 auto"></span>
+<button type="button" style="box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 300px; height: 40px; padding: 0 8px 0 12px; border-radius: 12px; border: 1px solid #7E879A; background: #F2F4F9; color: #596276; font: inherit; font-size: 14px; cursor: pointer">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<span style="flex: 1 1 auto; text-align: left">Search the docs</span>
+<span style="display: flex; gap: 4px"><kbd style="display: inline-flex; align-items: center; height: 22px; padding: 0 6px; border-radius: 6px; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E8EBF2; font: inherit; font-size: 11px; font-weight: 600; color: #596276">Ctrl</kbd><kbd style="display: inline-flex; align-items: center; height: 22px; padding: 0 6px; border-radius: 6px; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E8EBF2; font: inherit; font-size: 11px; font-weight: 600; color: #596276">K</kbd></span>
+</button>
+<label style="display: flex; align-items: center; gap: 6px; color: #596276; font-size: 14px"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%)">Language</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"></path></svg><select style="height: 36px; padding: 0 6px; border-radius: 10px; border: 1px solid #7E879A; background: #F2F4F9; color: #0E1424; font: inherit; font-size: 14px"><option>English</option><option>Français</option><option>العربية</option><option>Deutsch</option></select></label>
+<a href="#" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; border-radius: 12px; text-decoration: none; font-weight: 600; color: #0E1424">Sign in</a>
+<a href="#" style="height: 40px; padding: 0 16px; display: inline-flex; align-items: center; border-radius: 12px; text-decoration: none; font-weight: 600; background: #3B5BFD; color: #FFFFFF">Start free</a>
+
+
+</div>
+</header>
+
+
+<main>
+<section style="background: linear-gradient(150deg, #5B78FF 0%, #3B5BFD 45%, #2338C2 100%); color: #FFFFFF">
+<div style="box-sizing: border-box; max-width: 1440px; margin: 0 auto; padding: 72px 32px 64px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .85">Sellora help centre</span>
+<h1 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 44px; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em">How can we help?</h1>
+<p style="margin: 0; max-width: 560px; font-size: 19px; opacity: .9">Guides for running your store: orders, products, payments, delivery and every module.</p>
+<label style="box-sizing: border-box; width: 100%; max-width: 640px; display: flex; align-items: center; gap: 10px; height: 56px; padding: 0 16px; border-radius: 16px; background: #FFFFFF; color: #596276; box-shadow: 0 12px 32px rgba(9,13,24,0.25)">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%)">Search the docs</span>
+<input type="search" placeholder="Search, e.g. refund an order" style="flex: 1 1 auto; min-width: 0; border: none; outline: none; background: transparent; color: #0E1424; font: inherit; font-size: 16px">
+</label>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 760px">
+<span style="font-size: 13px; opacity: .85; align-self: center">Popular:</span>
+<a href="#" style="height: 32px; padding: 0 12px; display: inline-flex; align-items: center; border-radius: 999px; background: rgba(255,255,255,0.16); color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500">Refund an order</a><a href="#" style="height: 32px; padding: 0 12px; display: inline-flex; align-items: center; border-radius: 999px; background: rgba(255,255,255,0.16); color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500">Connect Paystack</a><a href="#" style="height: 32px; padding: 0 12px; display: inline-flex; align-items: center; border-radius: 999px; background: rgba(255,255,255,0.16); color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500">Add a team member</a><a href="#" style="height: 32px; padding: 0 12px; display: inline-flex; align-items: center; border-radius: 999px; background: rgba(255,255,255,0.16); color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500">Set up delivery zones</a><a href="#" style="height: 32px; padding: 0 12px; display: inline-flex; align-items: center; border-radius: 999px; background: rgba(255,255,255,0.16); color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500">Import products</a>
+</div>
+</div>
+</section>
+<div style="box-sizing: border-box; max-width: 1440px; margin: 0 auto; padding: 48px 32px; display: flex; flex-direction: column; gap: 36px">
+<section aria-labelledby="h-topics" style="display: flex; flex-direction: column; gap: 16px">
+<h2 id="h-topics" style="margin: 0; font-size: 22px; font-weight: 600">Browse by topic</h2>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+
+<a href="#" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); text-decoration: none; color: #0E1424">
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9z"></path></svg></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-size: 16px; font-weight: 600">Getting started</span></span>
+<span style="color: #596276; font-size: 14px">Open your store, add products and take your first order.</span>
+<span style="margin-top: auto; color: #596276; font-size: 13px">12 articles</span>
+</a>
+
+<a href="#" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); text-decoration: none; color: #0E1424">
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M5 7l1 13h12l1-13M9 7V4h6v3"></path></svg></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-size: 16px; font-weight: 600">Orders</span></span>
+<span style="color: #596276; font-size: 14px">Fulfil, refund, cancel and handle returns and exchanges.</span>
+<span style="margin-top: auto; color: #596276; font-size: 13px">18 articles</span>
+</a>
+
+<a href="#" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); text-decoration: none; color: #0E1424">
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"></path></svg></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-size: 16px; font-weight: 600">Products and stock</span></span>
+<span style="color: #596276; font-size: 14px">Variants, categories, stock locations and imports.</span>
+<span style="margin-top: auto; color: #596276; font-size: 13px">21 articles</span>
+</a>
+
+<a href="#" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); text-decoration: none; color: #0E1424">
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20v12H2zM2 11h20M6 15h4"></path></svg></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-size: 16px; font-weight: 600">Payments</span></span>
+<span style="color: #596276; font-size: 14px">Paystack, Flutterwave, bank transfer and cash on delivery.</span>
+<span style="margin-top: auto; color: #596276; font-size: 13px">14 articles</span>
+</a>
+
+<a href="#" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); text-decoration: none; color: #0E1424">
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4M17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path></svg></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-size: 16px; font-weight: 600">Delivery</span><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 999px; background: #E9EDFF; color: #3B5BFD; font-size: 11px; font-weight: 700; white-space: nowrap">Growth</span></span>
+<span style="color: #596276; font-size: 14px">Shipping zones, your own drivers and tracking.</span>
+<span style="margin-top: auto; color: #596276; font-size: 13px">11 articles</span>
+</a>
+
+<a href="#" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); text-decoration: none; color: #0E1424">
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-size: 16px; font-weight: 600">Customers</span></span>
+<span style="color: #596276; font-size: 14px">Accounts, groups, notes and privacy requests.</span>
+<span style="margin-top: auto; color: #596276; font-size: 13px">9 articles</span>
+</a>
+
+<a href="#" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); text-decoration: none; color: #0E1424">
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8zM7.5 7.5h.01"></path></svg></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-size: 16px; font-weight: 600">Promotions</span></span>
+<span style="color: #596276; font-size: 14px">Discounts, codes and automatic offers.</span>
+<span style="margin-top: auto; color: #596276; font-size: 13px">7 articles</span>
+</a>
+
+<a href="#" style="display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); text-decoration: none; color: #0E1424">
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-size: 16px; font-weight: 600">Store settings</span></span>
+<span style="color: #596276; font-size: 14px">Team, roles, taxes, currencies and your domain.</span>
+<span style="margin-top: auto; color: #596276; font-size: 13px">16 articles</span>
+</a>
+
+</div>
+</section>
+<section aria-labelledby="h-start" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 24px; border-radius: 20px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05)">
+<h2 id="h-start" style="margin: 0; font-size: 22px; font-weight: 600">New to Sellora? Start here</h2>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px">
+
+<li><a href="#" style="display: flex; align-items: center; gap: 12px; padding: 10px 8px; border-radius: 12px; text-decoration: none; color: #0E1424"><span aria-hidden="true" style="width: 28px; height: 28px; flex: none; border-radius: 999px; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700">1</span><span style="flex: 1 1 auto; font-weight: 500">Create your store and confirm your email</span><span style="color: #596276; font-size: 13px">3 min</span></a></li>
+
+<li><a href="#" style="display: flex; align-items: center; gap: 12px; padding: 10px 8px; border-radius: 12px; text-decoration: none; color: #0E1424"><span aria-hidden="true" style="width: 28px; height: 28px; flex: none; border-radius: 999px; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700">2</span><span style="flex: 1 1 auto; font-weight: 500">Add your first product</span><span style="color: #596276; font-size: 13px">5 min</span></a></li>
+
+<li><a href="#" style="display: flex; align-items: center; gap: 12px; padding: 10px 8px; border-radius: 12px; text-decoration: none; color: #0E1424"><span aria-hidden="true" style="width: 28px; height: 28px; flex: none; border-radius: 999px; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700">3</span><span style="flex: 1 1 auto; font-weight: 500">Connect a payment method</span><span style="color: #596276; font-size: 13px">4 min</span></a></li>
+
+<li><a href="#" style="display: flex; align-items: center; gap: 12px; padding: 10px 8px; border-radius: 12px; text-decoration: none; color: #0E1424"><span aria-hidden="true" style="width: 28px; height: 28px; flex: none; border-radius: 999px; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700">4</span><span style="flex: 1 1 auto; font-weight: 500">Set up delivery or pickup</span><span style="color: #596276; font-size: 13px">6 min</span></a></li>
+
+<li><a href="#" style="display: flex; align-items: center; gap: 12px; padding: 10px 8px; border-radius: 12px; text-decoration: none; color: #0E1424"><span aria-hidden="true" style="width: 28px; height: 28px; flex: none; border-radius: 999px; background: #F2F4F9; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700">5</span><span style="flex: 1 1 auto; font-weight: 500">Share your store link</span><span style="color: #596276; font-size: 13px">2 min</span></a></li>
+
+</ol>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 24px; border-radius: 20px; background: linear-gradient(140deg, #4C6BFF 0%, #2E46D6 100%); color: #FFFFFF">
+<h2 style="margin: 0; font-size: 19px; font-weight: 600">Still stuck?</h2>
+<p style="margin: 0; opacity: .9">Our team answers in English, French and Arabic, usually within a working day.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto">
+<a href="#" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; border-radius: 12px; background: #FFFFFF; color: #1E2F9E; text-decoration: none; font-weight: 600">Contact support</a>
+<a href="#" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; border-radius: 12px; background: rgba(255,255,255,0.16); color: #FFFFFF; text-decoration: none; font-weight: 600">Service status</a>
+</div>
+</div>
+</section>
+</div>
+</main>
+
+
+
+
+
+
+
+
+
+<footer style="box-shadow: inset 0 1px 0 #E8EBF2; margin-top: 24px">
+<div style="box-sizing: border-box; max-width: 1440px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; font-size: 13px; color: #596276">
+<span>© 2026 Sellora</span><a href="#" style="text-decoration: none">Status</a><a href="#" style="text-decoration: none">Terms</a><a href="#" style="text-decoration: none">Privacy</a><a href="#" style="text-decoration: none">Contact support</a>
+</div>
+</footer>
+
+
+
+
+
+
+
+</div>
+</body></html>

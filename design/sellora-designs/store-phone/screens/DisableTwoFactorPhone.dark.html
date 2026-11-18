@@ -1,0 +1,448 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#07090F}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.85}
+
+/* polish: tables keep cells on one line and scroll inside their card */
+td,th{white-space:nowrap}
+[style*="overflow-x: auto"]{position:relative}
+[style*="border-radius: 999px"]{white-space:nowrap}
+/* polish: status pills carry a shape, not only a colour */
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+</style>
+</head><body>
+
+<div style="position: relative; min-height: 100vh; height: 844px; overflow: hidden; display: flex; flex-wrap: wrap; align-content: flex-start; background: #07090F; color: #F2F4F8; font-family: Inter, system-ui, sans-serif; font-size: 14px">
+
+
+
+<main style="flex: 999 1 560px; min-width: 0; padding: 12px 16px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+
+<div style="display: flex; align-items: center; gap: 10px; height: 48px">
+<a href="NavPhone.dc.html" aria-label="Open menu" style="width: 44px; height: 44px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+</a>
+<span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 10px; background: #6B86FF; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; flex: 0 0 auto">S</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ada's Fashion</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">ada-fashion.sellora.com</span>
+</span>
+<a href="SearchPhone.dc.html" aria-label="Search" style="width: 44px; height: 44px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+</a>
+<a href="AlertsPhone.dc.html" aria-label="Alerts, 4 new" style="position: relative; width: 44px; height: 44px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: #F87171"></span>
+</a>
+</div>
+
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Your account</h1>
+
+</div>
+<span style="color: #9AA3B5">Ada Okafor · Owner</span>
+</div>
+
+
+<a href="SignOutPhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; font-weight: 600">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H4V3h5M16 17l5-5-5-5M21 12H9"></path></svg>
+Sign out
+</a>
+
+</header>
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Profile</h2>
+<span style="color: #9AA3B5; font-size: 13px"></span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Name</span>
+<span style="box-sizing: border-box; border: 1px solid #626B81; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; background: #1A1E2A">
+
+<input type="text" value="Ada Okafor" placeholder="" style="border: none; outline: none; background: transparent; color: #F2F4F8; font: inherit; flex: 1 1 auto; min-width: 0">
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Email</span>
+<span style="box-sizing: border-box; border: 1px solid #626B81; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; background: #1A1E2A">
+
+<input type="text" value="ada@adafashion.ng" placeholder="" style="border: none; outline: none; background: transparent; color: #F2F4F8; font: inherit; flex: 1 1 auto; min-width: 0">
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="color: #9AA3B5; font-size: 12px">Change by asking another owner, or support.</span>
+
+</div>
+
+
+
+
+
+
+
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Language</span>
+<span style="display: flex; align-items: center; gap: 8px">
+<select style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none; flex: 1 1 auto; min-width: 0">
+<option selected>English</option><option>Français</option><option>Yorùbá</option><option>Hausa</option><option>Igbo</option>
+</select>
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+</section>
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Password</h2>
+<span style="color: #9AA3B5; font-size: 13px">Changed 3 months ago.</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+<a href="ChangePasswordPhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #1A1E2A; color: #F2F4F8; font-weight: 600">Change password</a>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+</section>
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Two-factor sign-in</h2>
+<span style="color: #9AA3B5; font-size: 13px">Required by your store.</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 12px; background: #1A1E2A">
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #9AA3B5">Authenticator app</span>
+<span style="font-weight: 600; text-align: right">On since March 2025</span>
+</div>
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #9AA3B5">Recovery codes left</span>
+<span style="font-weight: 600; text-align: right">7 of 8</span>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+<a href="DisableTwoFactorPhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #DC2626; color: #FFFFFF; font-weight: 600">Turn off</a><a href="TwoFactorSetupPhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #1A1E2A; color: #F2F4F8; font-weight: 600">Set up again</a><a href="RecoveryCodesPhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #1A1E2A; color: #F2F4F8; font-weight: 600">New recovery codes</a>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+</section>
+
+</div>
+
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">This device</h2>
+<span style="color: #9AA3B5; font-size: 13px">Signed in today, 07:02</span>
+</div>
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<a href="SignOutPhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #1A1E2A; color: #F2F4F8; font-weight: 600">Sign out</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+</div>
+</div>
+
+
+
+</main>
+
+<nav aria-label="Main" style="position: sticky; bottom: 0; flex: 1 1 100%; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; padding: 8px 10px 14px; box-sizing: border-box; background: #0C0F17; box-shadow: 0 -1px 0 #222735">
+
+<a href="DashboardPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+Home
+</a>
+
+<a href="OrdersPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12l1 4H5zM5 6h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 10a3 3 0 0 0 6 0"></path></svg>
+Orders
+</a>
+
+<a href="ProductsPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"></path></svg>
+Products
+</a>
+
+<a href="CustomersPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+Customers
+</a>
+
+<a href="NavPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>
+Menu
+</a>
+
+</nav>
+
+
+<div style="position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 0; box-sizing: border-box; background: rgba(0,0,0,0.66)">
+<a href="ProfilePhone.dc.html" aria-label="Close" style="position: absolute; inset: 0"></a>
+
+
+
+
+
+
+<section role="alertdialog" aria-modal="true" aria-label="Turn off two-factor sign-in?" style="position: relative; width: 100%; box-sizing: border-box; border-radius: 24px 24px 0 0; background: #12151E; box-shadow: 0 -12px 40px rgba(0,0,0,0.22); display: flex; flex-direction: column; gap: 16px; padding: 10px 18px 24px">
+
+<span aria-hidden="true" style="align-self: center; width: 40px; height: 5px; border-radius: 3px; background: #3A4152"></span>
+
+<div style="display: flex; align-items: flex-start; gap: 14px">
+
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #331516; color: #F87171; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+</span>
+
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 auto; min-width: 0">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Turn off two-factor sign-in?</h2>
+<span style="color: #9AA3B5; line-height: 1.5">Your store requires it, so you will be asked to set it up again next sign-in.</span>
+</div>
+
+</div>
+
+<ul style="margin: 0; padding: 12px 14px 12px 32px; border-radius: 12px; background: #1A1E2A; display: flex; flex-direction: column; gap: 6px; line-height: 1.45">
+<li>Your recovery codes stop working.</li>
+</ul>
+
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; overflow-y: auto; max-height: 520px">
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Your password</span>
+<span style="box-sizing: border-box; border: 1px solid #626B81; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; background: #1A1E2A; box-shadow: none">
+
+<input type="text" value="" placeholder="Password" style="border: none; outline: none; background: transparent; color: #F2F4F8; font: inherit; flex: 1 1 auto; min-width: 0">
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column-reverse; gap: 10px">
+<a href="ProfilePhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #1A1E2A; color: #F2F4F8; font-weight: 600; width: 100%; box-sizing: border-box; height: 50px">Cancel</a><a href="ProfilePhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #DC2626; color: #FFFFFF; font-weight: 600; width: 100%; box-sizing: border-box; height: 50px">Turn off</a>
+</div>
+</section>
+
+</div>
+
+</div>
+</body></html>

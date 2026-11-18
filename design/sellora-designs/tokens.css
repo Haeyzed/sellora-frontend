@@ -1,0 +1,235 @@
+/* Sellora design tokens
+ * Taken from the Sellora design canvases (Platform Admin, Store Admin, Storefront, Driver).
+ * Light is the default. Dark applies under .dark or [data-theme="dark"] on <html>.
+ * App-specific extras: put data-app="storefront" | "driver" | "auth" on <html>, beside the .dark class.
+ * One focus colour name everywhere: --sl-ring-color (with --sl-ring-width).
+ * The shadcn section at the bottom maps these onto the variable names shadcn/ui components read.
+ */
+
+/* ---------- Fonts ---------- */
+/* <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"> */
+:root {
+  --sl-font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --sl-font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif; /* headings, numbers, brand */
+
+  /* Type scale: the designs use only these sizes */
+  --sl-text-2xs: 11px;  /* meta, captions */
+  --sl-text-xs: 12px;   /* labels, badges, secondary text */
+  --sl-text-sm: 13px;   /* table cells, dense admin text */
+  --sl-text-base: 14px; /* admin body */
+  --sl-text-md: 16px;   /* storefront and phone body, card titles */
+  --sl-text-lg: 19px;   /* section titles, dialog titles */
+  --sl-text-xl: 22px;   /* phone page titles */
+  --sl-text-2xl: 26px;  /* page titles, KPI figures */
+  --sl-text-3xl: 32px;  /* large headings */
+  --sl-text-4xl: 44px;  /* hero, sign-in panel */
+
+  /* Radius: the designs use only these */
+  --sl-radius-xs: 6px;    /* small marks, kbd keys */
+  --sl-radius-sm: 10px;   /* chips, small buttons, nav items */
+  --sl-radius-md: 12px;   /* inputs and buttons */
+  --sl-radius-lg: 16px;   /* tiles, notes, driver controls */
+  --sl-radius-xl: 20px;   /* cards and dialogs */
+  --sl-radius-2xl: 24px;  /* sheets, sign-in panel */
+  --sl-radius-full: 999px;
+
+  /* Spacing (gap/padding steps used in the designs) */
+  --sl-space-0-5: 2px; --sl-space-1: 4px; --sl-space-1-5: 6px; --sl-space-2: 8px; --sl-space-2-5: 10px;
+  --sl-space-3: 12px; --sl-space-3-5: 14px; --sl-space-4: 16px; --sl-space-5: 20px; --sl-space-6: 24px;
+  --sl-space-7: 28px; --sl-space-8: 32px;
+
+  /* Control heights */
+  --sl-control-sm: 36px;
+  --sl-control-md: 44px;   /* admin inputs; also the minimum touch target */
+  --sl-control-lg: 48px;   /* storefront and sign-in inputs and buttons */
+  --sl-control-xl: 54px;   /* driver app primary buttons */
+
+  /* Layout */
+  --sl-sidebar: 256px;
+  --sl-sidebar-collapsed: 84px;
+  --sl-content-max: 1440px;
+  --sl-ring-width: 3px;     /* focus ring */
+}
+
+/* ---------- Colors: shared core (all apps) ---------- */
+:root {
+  --sl-bg: #F3F5FA;
+  --sl-side: #FFFFFF;
+  --sl-surface: #FFFFFF;
+  --sl-surface-2: #F2F4F9;
+  --sl-text: #0E1424;
+  --sl-muted: #596276;
+  --sl-line: #E8EBF2;
+  --sl-dash: #C9CFDC;
+  --sl-field: #7E879A;   /* input borders: 3:1 against cards and page */
+  --sl-ring-color: rgba(59,91,253,0.35);
+  --sl-gradient-brand: linear-gradient(150deg, #5B78FF 0%, #3B5BFD 45%, #2338C2 100%);
+  --sl-gradient-highlight: linear-gradient(140deg, #4C6BFF 0%, #2E46D6 100%);
+  --sl-gradient-chart-top: rgba(59,91,253,0.22);
+  --sl-gradient-placeholder: linear-gradient(135deg, #E9EDFF 0%, #FFF1D6 100%);
+  --sl-shimmer-mid: #E6E9F1;
+  --sl-accent: #3B5BFD;
+  --sl-accent-soft: #E9EDFF;
+  --sl-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05);
+  --sl-area-opacity: 0.10;
+  --sl-tip-bg: #0E1424;
+  --sl-tip-text: #FFFFFF;
+  --sl-kbd-edge: #D3D8E3;
+  --sl-kbd-ring: #E4E8F0;
+  --sl-success-bg: #E3F6EC;
+  --sl-success-text: #0B6B40;
+  --sl-warn-bg: #FFF1D6;
+  --sl-warn-text: #8A5200;
+  --sl-danger-bg: #FDE8E6;
+  --sl-danger-text: #B42318;
+  --sl-info-bg: #E9EDFF;
+  --sl-info-text: #2D46C9;
+  --sl-neutral-bg: #EEF0F5;
+  --sl-neutral-text: #475066;
+}
+:root.dark,
+[data-theme="dark"] {
+  --sl-bg: #07090F;
+  --sl-side: #0C0F17;
+  --sl-surface: #12151E;
+  --sl-surface-2: #1A1E2A;
+  --sl-text: #F2F4F8;
+  --sl-muted: #9AA3B5;
+  --sl-line: #222735;
+  --sl-dash: #3A4152;
+  --sl-field: #626B81;
+  --sl-ring-color: rgba(107,134,255,0.45);
+  --sl-gradient-brand: linear-gradient(150deg, #2B3A8F 0%, #1B2246 65%, #121833 100%);
+  --sl-gradient-highlight: linear-gradient(140deg, #2B3A8F 0%, #1B2246 100%);
+  --sl-gradient-chart-top: rgba(107,134,255,0.34);
+  --sl-gradient-placeholder: linear-gradient(135deg, #1B2246 0%, #2E2410 100%);
+  --sl-shimmer-mid: #262B3A;
+  --sl-accent: #6B86FF;
+  --sl-accent-soft: #1B2246;
+  --sl-shadow: none;
+  --sl-area-opacity: 0.16;
+  --sl-tip-bg: #F2F4F8;
+  --sl-tip-text: #0E1424;
+  --sl-kbd-edge: #05070C;
+  --sl-kbd-ring: #2A3040;
+  --sl-success-bg: #10291C;
+  --sl-success-text: #4ADE80;
+  --sl-warn-bg: #2E2410;
+  --sl-warn-text: #FBBF24;
+  --sl-danger-bg: #331516;
+  --sl-danger-text: #F87171;
+  --sl-info-bg: #1B2246;
+  --sl-info-text: #9DB0FF;
+  --sl-neutral-bg: #1F2431;
+  --sl-neutral-text: #C3CAD8;
+}
+
+/* ---------- Extras: storefront ---------- */
+[data-app="storefront"] {
+  --sl-ink: #0E1424;
+  --sl-ink-text: #FFFFFF;
+  --sl-hero-bg: #3B5BFD;
+  --sl-backdrop: rgba(9,13,24,0.48);
+  --sl-danger-btn: #B42318;
+}
+.dark [data-app="storefront"],
+[data-theme="dark"] [data-app="storefront"],
+.dark[data-app="storefront"],
+[data-theme="dark"][data-app="storefront"] {
+  --sl-ink: #F2F4F8;
+  --sl-ink-text: #0E1424;
+  --sl-hero-bg: #1B2246;
+  --sl-backdrop: rgba(0,0,0,0.66);
+  --sl-danger-btn: #DC2626;
+}
+
+/* ---------- Extras: driver ---------- */
+[data-app="driver"] {
+  --sl-shadow: 0 1px 2px rgba(16,24,40,0.05), 0 8px 24px rgba(16,24,40,0.06);
+  --sl-ink: #0E1424;
+  --sl-ink-text: #FFFFFF;
+  --sl-backdrop: rgba(9,13,24,0.48);
+  --sl-success-btn: #0B7A48;
+  --sl-danger-btn: #B42318;
+  --sl-hero: linear-gradient(140deg, #4C6BFF 0%, #2E46D6 100%);
+}
+.dark [data-app="driver"],
+[data-theme="dark"] [data-app="driver"],
+.dark[data-app="driver"],
+[data-theme="dark"][data-app="driver"] {
+  --sl-shadow: 0 0 0 1px #1C2130;
+  --sl-ink: #F2F4F8;
+  --sl-ink-text: #0E1424;
+  --sl-backdrop: rgba(0,0,0,0.66);
+  --sl-success-btn: #16A34A;
+  --sl-danger-btn: #DC2626;
+  --sl-hero: linear-gradient(140deg, #2B3A8F 0%, #1B2246 100%);
+}
+
+/* ---------- Extras: auth ---------- */
+[data-app="auth"] {
+  --sl-bg: #FFFFFF;
+  --sl-panel: #3B5BFD;
+  --sl-card-on-panel: #FFFFFF;
+  --sl-ring-color: #3B5BFD;
+}
+.dark [data-app="auth"],
+[data-theme="dark"] [data-app="auth"],
+.dark[data-app="auth"],
+[data-theme="dark"][data-app="auth"] {
+  --sl-bg: #07090F;
+  --sl-panel: #1B2246;
+  --sl-card-on-panel: #12151E;
+  --sl-ring-color: #6B86FF;
+}
+
+/* ---------- shadcn/ui mapping ---------- */
+:root, .dark, [data-theme="dark"] {
+  --background: var(--sl-bg);
+  --foreground: var(--sl-text);
+  --card: var(--sl-surface);
+  --card-foreground: var(--sl-text);
+  --popover: var(--sl-surface);
+  --popover-foreground: var(--sl-text);
+  --primary: var(--sl-accent);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--sl-surface-2);
+  --secondary-foreground: var(--sl-text);
+  --muted: var(--sl-surface-2);
+  --muted-foreground: var(--sl-muted);
+  --accent: var(--sl-accent-soft);
+  --accent-foreground: var(--sl-text);
+  --destructive: var(--sl-danger-text);
+  --border: var(--sl-line);
+  --input: var(--sl-field);      /* input border colour; inputs are filled with --sl-surface-2 */
+  --ring: var(--sl-accent);
+  --radius: var(--sl-radius-md);
+  --sidebar: var(--sl-side);
+  --sidebar-foreground: var(--sl-text);
+  --sidebar-primary: var(--sl-accent);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--sl-accent-soft);
+  --sidebar-accent-foreground: var(--sl-accent);
+  --sidebar-border: var(--sl-line);
+  --sidebar-ring: var(--sl-accent);
+  --font-sans: var(--sl-font-body);
+  --font-heading: var(--sl-font-display);
+}
+
+/* Gradients: only for the brand panel, chart fill, highlight cards (driver next stop, upgrade, store ready),
+   placeholders and the loading shimmer. Buttons, tables, sidebar, badges, inputs and normal cards stay flat. */
+.sl-skeleton {
+  background: linear-gradient(90deg, var(--sl-surface-2) 0%, var(--sl-shimmer-mid) 50%, var(--sl-surface-2) 100%);
+  background-size: 800px 100%;
+  animation: sl-shimmer 1.4s linear infinite;
+  border-radius: 8px;
+}
+@keyframes sl-shimmer { from { background-position: -400px 0; } to { background-position: 400px 0; } }
+@media (prefers-reduced-motion: reduce) { .sl-skeleton { animation: none; } }
+
+/* Tables: cells stay on one line; wide tables scroll inside their card (overflow-x: auto), never the page. */
+
+/* Status badges: pair the *-bg with its *-text, and show a shape for the tones that matter:
+   success = Lucide Check, warning = Lucide CircleAlert (or "!"), danger = Lucide X. Info and neutral: text only.
+   success = paid, delivered, active · warn = pending, low stock · danger = failed, locked, overdue
+   info = processing, new · neutral = draft, archived, inactive */
