@@ -1,0 +1,280 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#07090F}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.85}
+
+/* polish: tables keep cells on one line and scroll inside their card */
+td,th{white-space:nowrap}
+[style*="overflow-x: auto"]{position:relative}
+[style*="border-radius: 999px"]{white-space:nowrap}
+/* polish: status pills carry a shape, not only a colour */
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+</style>
+</head><body>
+
+<div style="position: relative; min-height: 100vh; height: 844px; overflow: hidden; display: flex; flex-wrap: wrap; align-content: flex-start; background: #07090F; color: #F2F4F8; font-family: Inter, system-ui, sans-serif; font-size: 14px">
+
+
+
+<main style="flex: 999 1 560px; min-width: 0; padding: 12px 16px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+
+<div style="display: flex; align-items: center; gap: 10px; height: 48px">
+<a href="NavPhone.dc.html" aria-label="Open menu" style="width: 44px; height: 44px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+</a>
+<span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 10px; background: #6B86FF; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; flex: 0 0 auto">S</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Platform admin</span>
+<span style="font-size: 12px; color: #9AA3B5">admin.sellora.com</span>
+</span>
+<a href="SearchPhone.dc.html" aria-label="Search" style="width: 44px; height: 44px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+</a>
+<a href="AlertsPhone.dc.html" aria-label="Alerts, 4 new" style="position: relative; width: 44px; height: 44px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: #F87171"></span>
+</a>
+</div>
+
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px">
+
+<a href="PartnersPhone.dc.html" style="display: flex; align-items: center; gap: 6px; color: #9AA3B5; font-size: 13px; font-weight: 500">
+<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+Partners
+</a>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Partner applications</h1>
+
+</div>
+<span style="color: #9AA3B5">Approve the ones you want to work with. Applicants are emailed either way.</span>
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<div role="tablist" aria-label="Applications" style="display: flex; flex-wrap: nowrap; overflow-x: auto; max-width: 100%; gap: 4px; padding: 4px; border-radius: 12px; background: #1A1E2A">
+
+<button role="tab" aria-selected="true"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: #12151E; color: #F2F4F8; font: inherit; font-weight: 600; cursor: pointer; box-shadow: none; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">Waiting<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #1B2246; color: #6B86FF; font-weight: 600">3</span></button>
+
+<button role="tab" aria-selected="false"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: transparent; color: #9AA3B5; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">Approved<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #12151E; color: #9AA3B5; font-weight: 600">24</span></button>
+
+<button role="tab" aria-selected="false"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: transparent; color: #9AA3B5; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">Rejected<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #12151E; color: #9AA3B5; font-weight: 600">6</span></button>
+
+</div>
+<span style="flex: 1 1 auto"></span>
+
+
+</div>
+
+
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #1A1E2A">
+<div style="display: flex; align-items: center; gap: 12px">
+
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #1B2246; color: #6B86FF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: 0 0 auto">BA</span>
+
+<a href="ApprovePartnerPhone.dc.html" style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; color: inherit">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Bola Adeyinka</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">bola@shopsmart.ng</span>
+</a>
+
+<a href="ApplicationsMenuPhone.dc.html" aria-label="Actions for Bola Adeyinka" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent; width: 44px; height: 44px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1B2246; color: #9DB0FF; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: info">Waiting</span>
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px">
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">How they will promote</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">YouTube channel on small-business tools</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Country</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Nigeria</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Applied</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Today</span></span>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #1B2246">
+<div style="display: flex; align-items: center; gap: 12px">
+
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #2E2410; color: #FBBF24; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: 0 0 auto">GW</span>
+
+<a href="ApprovePartnerPhone.dc.html" style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; color: inherit">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Grace Wanjiru</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">grace@duka.co.ke</span>
+</a>
+
+<a href="ApplicationsMenuPhone.dc.html" aria-label="Actions for Grace Wanjiru" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #6B86FF; background: #1B2246; width: 44px; height: 44px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1B2246; color: #9DB0FF; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: info">Waiting</span>
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px">
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">How they will promote</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Builds online shops for market traders</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Country</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Kenya</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Applied</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Yesterday</span></span>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #1A1E2A">
+<div style="display: flex; align-items: center; gap: 12px">
+
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #10291C; color: #4ADE80; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: 0 0 auto">IO</span>
+
+<a href="ApprovePartnerPhone.dc.html" style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; color: inherit">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ifeanyi Okeke</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">ify@example.com</span>
+</a>
+
+<a href="ApplicationsMenuPhone.dc.html" aria-label="Actions for Ifeanyi Okeke" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent; width: 44px; height: 44px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #2E2410; color: #FBBF24; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: warn">Waiting</span>
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px">
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">How they will promote</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Will refer my own stores</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Country</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Nigeria</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Applied</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">2 days ago</span></span>
+
+</div>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 4px">
+<span style="color: #9AA3B5; font-size: 13px; flex: 1 1 auto">Page 1 of 1 · decided applications are kept for 90 days</span>
+
+<nav aria-label="Pages" style="display: flex; align-items: center; gap: 6px">
+
+<button aria-label="First page" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">«</button>
+
+<button aria-label="Previous page" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">‹</button>
+
+<button aria-label="Page 1" aria-current="page" aria-disabled="false" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #6B86FF; color: #FFFFFF; font: inherit; font-weight: 600; cursor: pointer">1</button>
+
+<button aria-label="Next page" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">›</button>
+
+<button aria-label="Last page, 1" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">»</button>
+
+</nav>
+</div>
+</section>
+
+
+
+
+
+</main>
+
+<nav aria-label="Main" style="position: sticky; bottom: 0; flex: 1 1 100%; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; padding: 8px 10px 14px; box-sizing: border-box; background: #0C0F17; box-shadow: 0 -1px 0 #222735">
+
+<a href="DashboardPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+Home
+</a>
+
+<a href="StoresPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"></path></svg>
+Stores
+</a>
+
+<a href="LegalDocsPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5"></path></svg>
+Legal
+</a>
+
+<a href="AdminsPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+Team
+</a>
+
+<a href="NavPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>
+Menu
+</a>
+
+</nav>
+
+
+<div style="position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 0; box-sizing: border-box; background: rgba(0,0,0,0.66)">
+<a href="PartnerApplicationsPhone.dc.html" aria-label="Close" style="position: absolute; inset: 0"></a>
+
+
+
+
+<div role="menu" aria-label="Grace Wanjiru" style="position: relative; width: 100%; box-sizing: border-box; border-radius: 24px 24px 0 0; background: #12151E; box-shadow: 0 -12px 40px rgba(0,0,0,0.22); display: flex; flex-direction: column; gap: 2px; padding: 10px 10px 18px">
+
+<span aria-hidden="true" style="align-self: center; width: 40px; height: 5px; border-radius: 3px; background: #3A4152; margin-bottom: 6px"></span>
+<span style="padding: 4px 12px 8px; font-weight: 700; font-size: 16px">Grace Wanjiru</span>
+
+
+
+
+<a role="menuitem" href="ApprovePartnerPhone.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 12px; border-radius: 10px; color: #F2F4F8; font-weight: 500">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M20 6 9 17l-5-5"></path></svg>
+<span style="flex: 1 1 auto">Approve</span>
+
+</a>
+
+
+
+
+<a role="menuitem" href="RejectPartnerPhone.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 12px; border-radius: 10px; color: #F87171; font-weight: 500">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+<span style="flex: 1 1 auto">Reject</span>
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+</body></html>
