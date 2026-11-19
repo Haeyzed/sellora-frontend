@@ -1,0 +1,544 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#F3F5FA}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.85}
+
+/* polish: tables keep cells on one line and scroll inside their card */
+td,th{white-space:nowrap}
+[style*="overflow-x: auto"]{position:relative}
+[style*="border-radius: 999px"]{white-space:nowrap}
+/* polish: status pills carry a shape, not only a colour */
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+</style>
+</head><body>
+
+<div style="position: relative; min-height: 100vh; height: auto; overflow: visible; display: flex; flex-wrap: wrap; align-content: flex-start; background: #F3F5FA; color: #0E1424; font-family: Inter, system-ui, sans-serif; font-size: 14px">
+
+
+<aside aria-label="Main menu" style="flex: 1 0 256px; max-width: 256px; min-width: 256px; background: #FFFFFF; display: flex; flex-direction: column; gap: 20px; padding: 20px 16px; box-sizing: border-box">
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; height: 40px; padding-left: 12px">
+<div style="width: 36px; height: 36px; border-radius: 10px; background: #3B5BFD; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; flex: 0 0 auto">S</div>
+
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; flex: 1 1 auto">Sellora</span>
+<button aria-label="Collapse sidebar" style="width: 32px; height: 32px; border-radius: 10px; border: none; background: #F2F4F9; color: #596276; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM9 3v18M16 9l-3 3 3 3"></path></svg>
+</button>
+
+</div>
+
+
+<button style="display: flex; align-items: center; gap: 10px; padding: 8px 10px 8px 12px; border-radius: 12px; border: none; background: #F2F4F9; color: #0E1424; cursor: pointer; text-align: left; font: inherit">
+<span style="width: 32px; height: 32px; border-radius: 10px; background: #FFF1D6; color: #8A5200; display: flex; align-items: center; justify-content: center; font-weight: 700">S</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Sellora Partners</span>
+<span style="font-size: 12px; color: #596276; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">partners.sellora.com</span>
+</span>
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+<nav style="display: flex; flex-direction: column; gap: 14px; flex: 1 1 auto">
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+
+
+<a href="PtDashboard.dc.html" aria-label="Home" title="Home" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Home</span>
+
+
+
+</a>
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+
+<span style="font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #596276; padding: 0 12px 6px">Your referrals</span>
+
+
+
+<a href="PtReferrals.dc.html" aria-label="Referred stores" title="Referred stores" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Referred stores</span>
+
+
+
+</a>
+
+
+
+
+
+<button type="button"  aria-expanded="false" style="display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; padding: 0 12px; border: none; border-radius: 12px; background: transparent; color: #596276; font: inherit; font-weight: 500; text-align: left; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M2 5h20v14H2zM2 10h20M6 15h4"></path></svg>
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Earnings</span>
+
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .15s; transform: rotate(0deg)"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+
+
+
+
+<a href="PtLinks.dc.html" aria-label="Links and codes" title="Links and codes" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8zM7.5 7.5h.01"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Links and codes</span>
+
+
+
+</a>
+
+
+
+</div>
+
+</nav>
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+
+
+<a href="PtHelp.dc.html" aria-label="Help" title="Help" style="position: relative; display: flex; align-items: center; justify-content: flex-start; gap: 12px; height: 38px; padding: 0 12px; border-radius: 12px; background: transparent; color: #596276; font-weight: 500">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"></path></svg>
+
+<span style="flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Help</span>
+
+
+
+</a>
+
+
+
+<a href="PtAccount.dc.html" aria-label="Your account: Tunde Bakare, Partner · Lagos Growth Agency" style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; padding: 10px 12px; margin-top: 8px; border-radius: 12px; background: #E9EDFF">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center; font-weight: 700; flex: 0 0 auto">TB</span>
+
+<span style="display: flex; flex-direction: column; min-width: 0">
+<span style="font-weight: 600">Tunde Bakare</span>
+<span style="font-size: 12px; color: #596276">Partner · Lagos Growth Agency</span>
+</span>
+
+</a>
+</div>
+</aside>
+
+
+<main style="flex: 999 1 560px; min-width: 0; padding: 20px 28px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">Your account</h1>
+
+</div>
+<span style="color: #596276">Tunde Bakare · Lagos Growth Agency</span>
+</div>
+
+<a href="PtReferrals.dc.html" aria-label="Search, Control K" style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 8px 0 14px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); color: #596276; flex: 0 1 340px; min-width: 200px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<span style="flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Search your stores</span>
+<span aria-label="Keyboard shortcut Control K" style="display: flex; align-items: center; gap: 4px">
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #F2F4F9; box-shadow: inset 0 -2px 0 #D3D8E3, 0 0 0 1px #E4E8F0; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #596276">Ctrl</kbd>
+<kbd style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: #F2F4F9; box-shadow: inset 0 -2px 0 #D3D8E3, 0 0 0 1px #E4E8F0; font-family: Inter, system-ui, sans-serif; font-size: 11px; font-weight: 600; color: #596276">K</kbd>
+</span>
+</a>
+<a href="PtCommissions.dc.html" aria-label="Alerts, 4 new" style="position: relative; width: 44px; height: 44px; border-radius: 12px; border: none; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); color: #0E1424; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: #B42318"></span>
+</a>
+
+
+<a href="PtSignOut.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); color: #0E1424; font-weight: 600">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H4V3h5M16 17l5-5-5-5M21 12H9"></path></svg>
+Sign out
+</a>
+
+</header>
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<section style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Profile</h2>
+<span style="color: #596276; font-size: 13px"></span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Name</span>
+<span style="box-sizing: border-box; border: 1px solid #7E879A; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; background: #F2F4F9">
+
+<input type="text" value="Tunde Bakare" placeholder="" style="border: none; outline: none; background: transparent; color: #0E1424; font: inherit; flex: 1 1 auto; min-width: 0">
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Company</span>
+<span style="box-sizing: border-box; border: 1px solid #7E879A; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; background: #F2F4F9">
+
+<input type="text" value="Lagos Growth Agency" placeholder="" style="border: none; outline: none; background: transparent; color: #0E1424; font: inherit; flex: 1 1 auto; min-width: 0">
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Email</span>
+<span style="box-sizing: border-box; border: 1px solid #7E879A; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 12px; background: #F2F4F9">
+
+<input type="text" value="tunde@lagosgrowth.ng" placeholder="" style="border: none; outline: none; background: transparent; color: #0E1424; font: inherit; flex: 1 1 auto; min-width: 0">
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</section>
+
+<section style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Bank account for payouts</h2>
+<span style="color: #596276; font-size: 13px">Changing it needs your two-step code. Sellora is told when it changes.</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 12px; background: #F2F4F9">
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #596276">Bank</span>
+<span style="font-weight: 600; text-align: right">GTBank</span>
+</div>
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #596276">Account</span>
+<span style="font-weight: 600; text-align: right">•••• 2231</span>
+</div>
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #596276">Account name</span>
+<span style="font-weight: 600; text-align: right">Lagos Growth Agency</span>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+<a href="ChangePartnerBank.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #F2F4F9; color: #0E1424; font-weight: 600">Change bank account</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</section>
+
+<section style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Sign-in</h2>
+<span style="color: #596276; font-size: 13px"></span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 12px; background: #F2F4F9">
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #596276">Password</span>
+<span style="font-weight: 600; text-align: right">Changed 2 months ago</span>
+</div>
+
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; gap: 12px">
+<span style="color: #596276">Two-step sign-in</span>
+<span style="font-weight: 600; text-align: right">On · needed for payouts</span>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+<a href="PtChangePassword.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #F2F4F9; color: #0E1424; font-weight: 600">Change password</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</section>
+
+</div>
+
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<section style="background: #FFFFFF; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 6px 20px rgba(16,24,40,0.05); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Your data</h2>
+<span style="color: #596276; font-size: 13px"></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; gap: 10px; padding: 12px 14px; border-radius: 12px; background: #E9EDFF; color: #2D46C9; line-height: 1.45">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 1px"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20M12 16v-4M12 8h.01"></path></svg>
+<span>You can ask for a copy of your data or to close your partner account. Payment records are kept for tax.</span>
+</div>
+
+
+
+
+</section>
+
+</div>
+</div>
+
+
+
+</main>
+
+
+<div style="position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 96px 24px 24px; box-sizing: border-box; background: rgba(9,13,24,0.48)">
+<a href="PtAccount.dc.html" aria-label="Close" style="position: absolute; inset: 0"></a>
+
+
+
+
+
+
+<section role="alertdialog" aria-modal="true" aria-label="Sign out?" style="position: relative; width: 460px; max-width: 100%; box-sizing: border-box; padding: 24px; border-radius: 24px; background: #FFFFFF; box-shadow: 0 30px 80px rgba(0,0,0,0.28); display: flex; flex-direction: column; gap: 18px">
+
+<div style="display: flex; align-items: flex-start; gap: 14px">
+
+<span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 12px; background: #E9EDFF; color: #3B5BFD; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H4V3h5M16 17l5-5-5-5M21 12H9"></path></svg>
+</span>
+
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 auto; min-width: 0">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Sign out?</h2>
+<span style="color: #596276; line-height: 1.5">You will need your password and a two-step code to come back.</span>
+</div>
+
+</div>
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+<a href="PtAccount.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #F2F4F9; color: #0E1424; font-weight: 600">Cancel</a><a href="PtDashboard.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #3B5BFD; color: #FFFFFF; font-weight: 600">Sign out</a>
+</div>
+</section>
+
+</div>
+
+</div>
+</body></html>

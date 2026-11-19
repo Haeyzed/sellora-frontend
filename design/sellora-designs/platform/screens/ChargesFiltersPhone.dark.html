@@ -1,0 +1,604 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#07090F}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{opacity:.85}
+
+/* polish: tables keep cells on one line and scroll inside their card */
+td,th{white-space:nowrap}
+[style*="overflow-x: auto"]{position:relative}
+[style*="border-radius: 999px"]{white-space:nowrap}
+/* polish: status pills carry a shape, not only a colour */
+[style*="--tone: up"]::before{content:"\2713";font-weight:800;margin-right:5px;font-size:11px}
+[style*="--tone: warn"]::before{content:"!";font-weight:800;margin-right:5px;font-size:12px}
+[style*="--tone: danger"]::before{content:"\2715";font-weight:800;margin-right:5px;font-size:10px}
+</style>
+</head><body>
+
+<div style="position: relative; min-height: 100vh; height: 844px; overflow: hidden; display: flex; flex-wrap: wrap; align-content: flex-start; background: #07090F; color: #F2F4F8; font-family: Inter, system-ui, sans-serif; font-size: 14px">
+
+
+
+<main style="flex: 999 1 560px; min-width: 0; padding: 12px 16px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+
+<div style="display: flex; align-items: center; gap: 10px; height: 48px">
+<a href="NavPhone.dc.html" aria-label="Open menu" style="width: 44px; height: 44px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+</a>
+<span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 10px; background: #6B86FF; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; flex: 0 0 auto">S</span>
+<span style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0">
+<span style="font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Platform admin</span>
+<span style="font-size: 12px; color: #9AA3B5">admin.sellora.com</span>
+</span>
+<a href="SearchPhone.dc.html" aria-label="Search" style="width: 44px; height: 44px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+</a>
+<a href="AlertsPhone.dc.html" aria-label="Alerts, 4 new" style="position: relative; width: 44px; height: 44px; border-radius: 12px; background: #12151E; box-shadow: none; color: #F2F4F8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: #F87171"></span>
+</a>
+</div>
+
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Charges</h1>
+
+</div>
+<span style="color: #9AA3B5">Every subscription payment Sellora took from a store, newest first.</span>
+</div>
+
+
+</header>
+
+
+
+
+
+<section aria-label="Summary" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+
+<div style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; padding: 14px; display: flex; align-items: center; gap: 12px; min-width: 0">
+<span style="width: 42px; height: 42px; border-radius: 12px; background: #10291C; color: #4ADE80; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h20v14H2zM2 10h20M6 15h4"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="color: #9AA3B5; font-size: 13px">Collected in November</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">₦18.4m · $6,120</span>
+</span>
+</div>
+
+<div style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; padding: 14px; display: flex; align-items: center; gap: 12px; min-width: 0">
+<span style="width: 42px; height: 42px; border-radius: 12px; background: #2E2410; color: #FBBF24; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="color: #9AA3B5; font-size: 13px">Failed, retrying</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">9</span>
+</span>
+</div>
+
+<div style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; padding: 14px; display: flex; align-items: center; gap: 12px; min-width: 0">
+<span style="width: 42px; height: 42px; border-radius: 12px; background: #331516; color: #F87171; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="color: #9AA3B5; font-size: 13px">Needs review</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">1</span>
+</span>
+</div>
+
+<div style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; padding: 14px; display: flex; align-items: center; gap: 12px; min-width: 0">
+<span style="width: 42px; height: 42px; border-radius: 12px; background: #1F2431; color: #C3CAD8; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18v4H3zM5 8v12h14V8M10 12h4"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="color: #9AA3B5; font-size: 13px">Refunded</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600">1</span>
+</span>
+</div>
+
+</section>
+
+
+
+
+<section style="background: #12151E; box-shadow: none; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<div role="tablist" aria-label="Charges" style="display: flex; flex-wrap: nowrap; overflow-x: auto; max-width: 100%; gap: 4px; padding: 4px; border-radius: 12px; background: #1A1E2A">
+
+<button role="tab" aria-selected="true"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: #12151E; color: #F2F4F8; font: inherit; font-weight: 600; cursor: pointer; box-shadow: none; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">All<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #1B2246; color: #6B86FF; font-weight: 600">999+</span></button>
+
+<button role="tab" aria-selected="false"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: transparent; color: #9AA3B5; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">Succeeded<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #12151E; color: #9AA3B5; font-weight: 600">999+</span></button>
+
+<button role="tab" aria-selected="false"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: transparent; color: #9AA3B5; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">Pending<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #12151E; color: #9AA3B5; font-weight: 600">3</span></button>
+
+<button role="tab" aria-selected="false"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: transparent; color: #9AA3B5; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">Failed<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #12151E; color: #9AA3B5; font-weight: 600">9</span></button>
+
+<button role="tab" aria-selected="false"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: transparent; color: #9AA3B5; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">Needs review<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #12151E; color: #9AA3B5; font-weight: 600">1</span></button>
+
+<button role="tab" aria-selected="false"  style="height: 32px; padding: 0 14px; border-radius: 10px; border: none; background: transparent; color: #9AA3B5; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 36px; white-space: nowrap">Refunded<span style="font-size: 12px; padding: 1px 7px; border-radius: 999px; background: #12151E; color: #9AA3B5; font-weight: 600">1</span></button>
+
+</div>
+<span style="flex: 1 1 auto"></span>
+
+<label style="display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 12px; border-radius: 12px; box-sizing: border-box; border: 1px solid #626B81; background: #1A1E2A; color: #9AA3B5; flex: 1 1 100%; min-width: 160px">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16M21 21l-4.35-4.35"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Filter this list</span>
+<input type="search" placeholder="Store, invoice or reference" style="border: none; outline: none; background: transparent; color: #F2F4F8; font: inherit; flex: 1 1 auto; min-width: 0">
+</label>
+
+
+<a href="ChargesFiltersPhone.dc.html" style="display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; border-radius: 12px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; height: 44px">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M6 12h12M10 19h4"></path></svg>
+Filters
+</a>
+
+</div>
+
+
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #1A1E2A">
+<div style="display: flex; align-items: center; gap: 12px">
+
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #1B2246; color: #6B86FF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: 0 0 auto">b</span>
+
+<a href="ChargeDetailPhone.dc.html" style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; color: inherit">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">bil_01JD2R7K4N</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">SEL-2026-00151 · renewal</span>
+</a>
+
+<a href="ChargesMenuPhone.dc.html" aria-label="Actions for bil_01JD2R7K4N" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent; width: 44px; height: 44px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #331516; color: #F87171; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: danger">Failed</span>
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px">
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Store</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ada's Fashion · ada-fashion.sellora.com</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Plan</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Growth · monthly</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Amount</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">₦35,000</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">When</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Today, 06:02</span></span>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #1A1E2A">
+<div style="display: flex; align-items: center; gap: 12px">
+
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #2E2410; color: #FBBF24; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: 0 0 auto">b</span>
+
+<a href="ChargeDetailPhone.dc.html" style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; color: inherit">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">bil_01JD2R6P1Z</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">SEL-2026-00150 · renewal</span>
+</a>
+
+<a href="ChargesMenuPhone.dc.html" aria-label="Actions for bil_01JD2R6P1Z" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent; width: 44px; height: 44px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #10291C; color: #4ADE80; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Succeeded</span>
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px">
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Store</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Kente Corner · kente-corner.sellora.com</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Plan</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Pro · yearly</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Amount</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">$790.00</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">When</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Today, 06:01</span></span>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #1A1E2A">
+<div style="display: flex; align-items: center; gap: 12px">
+
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #10291C; color: #4ADE80; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: 0 0 auto">b</span>
+
+<a href="ChargeDetailPhone.dc.html" style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; color: inherit">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">bil_01JD2Q9W3B</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">SEL-2026-00149 · upgrade</span>
+</a>
+
+<a href="ChargesMenuPhone.dc.html" aria-label="Actions for bil_01JD2Q9W3B" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent; width: 44px; height: 44px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1B2246; color: #9DB0FF; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: info">Pending</span>
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px">
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Store</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Lagos Gadgets · lagos-gadgets.sellora.com</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Plan</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Starter → Growth</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Amount</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">₦11,333</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">When</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Today, 05:48</span></span>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #1A1E2A">
+<div style="display: flex; align-items: center; gap: 12px">
+
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #331516; color: #F87171; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: 0 0 auto">b</span>
+
+<a href="ChargeDetailPhone.dc.html" style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; color: inherit">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">bil_01JD1X2M8C</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">SEL-2026-00148 · renewal</span>
+</a>
+
+<a href="ChargesMenuPhone.dc.html" aria-label="Actions for bil_01JD1X2M8C" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent; width: 44px; height: 44px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #10291C; color: #4ADE80; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: up">Succeeded</span>
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px">
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Store</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Austin Candles · austin-candles.sellora.com</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Plan</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Pro · monthly</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Amount</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">$79.00</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">When</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Yesterday</span></span>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #1A1E2A">
+<div style="display: flex; align-items: center; gap: 12px">
+
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #1F2431; color: #C3CAD8; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: 0 0 auto">b</span>
+
+<a href="ChargeDetailPhone.dc.html" style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; color: inherit">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">bil_01JD1W7T5D</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">SEL-2026-00147 · renewal</span>
+</a>
+
+<a href="ChargesMenuPhone.dc.html" aria-label="Actions for bil_01JD1W7T5D" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent; width: 44px; height: 44px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #2E2410; color: #FBBF24; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: warn">Needs review</span>
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px">
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Store</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Berlin Bikes · berlin-bikes.sellora.com</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Plan</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Growth · monthly</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Amount</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">$29.00</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">When</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Yesterday</span></span>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #1A1E2A">
+<div style="display: flex; align-items: center; gap: 12px">
+
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 12px; background: #1B2246; color: #6B86FF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: 0 0 auto">b</span>
+
+<a href="ChargeDetailPhone.dc.html" style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; color: inherit">
+<span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">bil_01JCZK3R2E</span>
+<span style="font-size: 12px; color: #9AA3B5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">SEL-2026-00146 · first payment</span>
+</a>
+
+<a href="ChargesMenuPhone.dc.html" aria-label="Actions for bil_01JCZK3R2E" style="width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; color: #9AA3B5; background: transparent; width: 44px; height: 44px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 6h.01M12 12h.01M12 18h.01"></path></svg>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 999px; background: #1F2431; color: #C3CAD8; font-size: 12px; font-weight: 600; white-space: nowrap; --tone: neutral">Refunded</span>
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13px">
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Store</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Bisi Wears · bisi-wears.sellora.com</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Plan</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Starter · monthly</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">Amount</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">₦15,000</span></span>
+
+<span style="display: flex; flex-direction: column; min-width: 0"><span style="color: #9AA3B5; font-size: 12px">When</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">28 Nov</span></span>
+
+</div>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 4px">
+<span style="color: #9AA3B5; font-size: 13px; flex: 1 1 auto">Newest first. Test charges are kept apart and never counted.</span>
+
+<nav aria-label="Pages, newest first" style="display: flex; align-items: center; gap: 6px">
+
+<button aria-label="Newest" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">«</button>
+
+<button aria-label="Previous page" aria-current="false" aria-disabled="true" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; opacity: 0.45; cursor: not-allowed; font-size: 16px; line-height: 1; padding: 0">‹</button>
+
+<button aria-label="Next page" aria-current="false" aria-disabled="false" style="min-width: 36px; height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #1A1E2A; color: #F2F4F8; font: inherit; font-weight: 500; cursor: pointer; font-size: 16px; line-height: 1; padding: 0">›</button>
+
+</nav>
+</div>
+</section>
+
+
+
+
+
+</main>
+
+<nav aria-label="Main" style="position: sticky; bottom: 0; flex: 1 1 100%; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; padding: 8px 10px 14px; box-sizing: border-box; background: #0C0F17; box-shadow: 0 -1px 0 #222735">
+
+<a href="DashboardPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+Home
+</a>
+
+<a href="StoresPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"></path></svg>
+Stores
+</a>
+
+<a href="LegalDocsPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5"></path></svg>
+Legal
+</a>
+
+<a href="AdminsPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+Team
+</a>
+
+<a href="NavPhone.dc.html" aria-current="false" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; border-radius: 12px; color: #9AA3B5; background: transparent; font-size: 11px; font-weight: 500">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>
+Menu
+</a>
+
+</nav>
+
+
+<div style="position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 0; box-sizing: border-box; background: rgba(0,0,0,0.66)">
+<a href="ChargesPhone.dc.html" aria-label="Close" style="position: absolute; inset: 0"></a>
+
+
+
+
+
+
+<section role="dialog" aria-modal="true" aria-label="Filter charges" style="position: relative; width: 100%; box-sizing: border-box; border-radius: 24px 24px 0 0; background: #12151E; box-shadow: 0 -12px 40px rgba(0,0,0,0.22); display: flex; flex-direction: column; gap: 16px; padding: 10px 18px 24px">
+
+<span aria-hidden="true" style="align-self: center; width: 40px; height: 5px; border-radius: 3px; background: #3A4152"></span>
+
+<div style="display: flex; align-items: flex-start; gap: 14px">
+
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 auto; min-width: 0">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Filter charges</h2>
+<span style="color: #9AA3B5; line-height: 1.5">Combine as many as you need.</span>
+</div>
+
+<a href="ChargesPhone.dc.html" aria-label="Close" style="width: 40px; height: 40px; border-radius: 12px; background: #1A1E2A; color: #9AA3B5; display: flex; align-items: center; justify-content: center; flex: 0 0 auto">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+</a>
+
+</div>
+
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; overflow-y: auto; max-height: 520px">
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Status</span>
+<span style="display: flex; align-items: center; gap: 8px">
+<select style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none; flex: 1 1 auto; min-width: 0">
+<option selected>Any status</option><option>Succeeded</option><option>Pending</option><option>Failed</option><option>Needs review</option><option>Refunded</option>
+</select>
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Currency</span>
+<span style="display: flex; align-items: center; gap: 8px">
+<select style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none; flex: 1 1 auto; min-width: 0">
+<option selected>Any currency</option><option>NGN</option><option>USD</option>
+</select>
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">Kind</span>
+<span style="display: flex; align-items: center; gap: 8px">
+<select style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none; flex: 1 1 auto; min-width: 0">
+<option selected>Any kind</option><option>First payment</option><option>Renewal</option><option>Upgrade</option>
+</select>
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div style="grid-column: auto; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600">When</span>
+<span style="display: flex; align-items: center; gap: 8px">
+<select style="height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border-radius: 12px; border: 1px solid #626B81; background: #1A1E2A; color: #F2F4F8; font: inherit; outline: none; flex: 1 1 auto; min-width: 0">
+<option>Today</option><option>Last 7 days</option><option selected>Last 30 days</option><option>Any time</option>
+</select>
+
+</span>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; min-width: 0">
+
+
+
+
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 14px; border-radius: 12px; background: #1A1E2A">
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; font-weight: 600">Include test charges</span>
+<span style="color: #9AA3B5; font-size: 12px">Test charges never count in totals.</span>
+</span>
+<button role="switch" aria-checked="false" aria-label="Include test charges"  style="position: relative; width: 44px; height: 26px; flex: 0 0 auto; border-radius: 12px; border: none; cursor: pointer; padding: 0; background: #3A4152"><span style="position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,0.25)"></span></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+<div style="display: flex; flex-direction: column-reverse; gap: 10px">
+<a href="ChargesPhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #1A1E2A; color: #F2F4F8; font-weight: 600; width: 100%; box-sizing: border-box; height: 50px">Clear</a><a href="ChargesPhone.dc.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 12px; background: #6B86FF; color: #FFFFFF; font-weight: 600; width: 100%; box-sizing: border-box; height: 50px">Show charges</a>
+</div>
+</section>
+
+</div>
+
+</div>
+</body></html>

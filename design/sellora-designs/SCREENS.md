@@ -12,9 +12,10 @@ Index of every designed screen in this bundle. Each row is one design in light a
 
 | App | Folder | Designs | Users | Suggested host |
 |---|---|---|---|---|
-| [Sellora Platform Admin](#platform) | `platform/` | 143 | Sellora staff (landlord) | `platform.<domain>` |
-| [Sellora Store Admin · Desktop](#store-desktop) | `store-desktop/` | 304 | Store owners and staff (tenant) | `{store-host}/admin` |
-| [Sellora Store Admin · Phone](#store-phone) | `store-phone/` | 304 | Store owners and staff (tenant) | `{store-host}/admin` (same app, phone layout) |
+| [Sellora Platform Admin](#platform) | `platform/` | 211 | Sellora staff (landlord) | `platform.<domain>` |
+| [Sellora Partner Portal](#partner) | `partner/` | 52 | Approved partners (affiliates) | `partners.<domain>` |
+| [Sellora Store Admin · Desktop](#store-desktop) | `store-desktop/` | 319 | Store owners and staff (tenant) | `{store-host}/admin` |
+| [Sellora Store Admin · Phone](#store-phone) | `store-phone/` | 319 | Store owners and staff (tenant) | `{store-host}/admin` (same app, phone layout) |
 | [Sellora Storefront](#storefront) | `storefront/` | 95 | Shoppers (tenant customers) | `<store>.<domain>` or the store's custom domain |
 | [Sellora Docs](#docs) | `docs/` | 13 | Anyone (public), and merchants inside Store Admin | `docs.<domain>` |
 | [Sellora Driver](#driver) | `driver/` | 18 | Store delivery drivers | `{store-host}/driver` (installable PWA) |
@@ -31,6 +32,11 @@ Index of every designed screen in this bundle. Each row is one design in light a
 - Gradients only on the brand panel, chart fill, highlight cards, placeholders and the loading shimmer.
 - **Page states** (loading, error, empty after filtering, 403, 404, session ended, plan limit reached, feature locked, not in your plan, feature switched off, 429, 503) are on the component sheet, under "Page states". Every screen uses them; they are not drawn on each screen.
 - **New-store dashboard** (`dashboardSetup`) is the same `/` route as the dashboard, shown while `GET staff/store/setup` says required steps are left. The "Finish setting up your store" card sits above the numbers; each step links to the screen that completes it. Activity sections (sales chart, needs attention, recent orders, top products) are hidden until the first order. The card goes away when every required step is done, or when the owner dismisses it.
+- **Billing banners** (`billingPastDue`, `billingSuspended`, `billingChange`) are drawn on the billing screen, but the banner itself is app-wide: it sits above the page header on every store admin screen while the subscription is past due, paused for non-payment, or has a plan change or cancellation scheduled. Only people with `subscription.manage` see the pay action. While a store is paused for non-payment, the billing screens and payment endpoints keep working so the owner can pay.
+- **Partner portal** (`partner/`) is its own app under the new `affiliate` guard. It reuses the platform admin shell and components with its own navigation. Joining is: apply → confirm email → application received → (approved) set password → set up two-step sign-in → save recovery codes → dashboard. The application form is on `partners.<domain>/apply`, linked from the marketing site. Partners only ever see a referred store's name, plan, status and their commission.
+- **Promo codes and partners** (platform: promo codes, partners, applications, payouts; store: the promo code field when changing plan) follow the approved decisions: discounts for the first payment or first N payments, never forever; partners earn a configurable share of what each referred store pays, before VAT, for a configurable number of months (starting at 20% for 12 months, set under Partners › Settings, with per-partner deals); payouts are recorded by hand each month.
+- **Every click goes somewhere.** Buttons that would download a file, copy text or open another site show a short confirmation alert in these designs ("Your download has started", "Copied", "Opens in a new tab"); in the real app they do the action instead. Help opens a help panel. Only pagers and the component sheets are static.
+- **Merchant billing** (store: plan and billing, billing invoices, change plan, pay; platform: charges, billing providers) follows the approved billing decisions: NGN and USD only at launch, NGN prices include 7.5% VAT, upgrades prorated now, downgrades and cancellations at period end, 7-day grace with retries on days 1, 3 and 6, then the store is paused until paid. Secret keys never appear in any screen.
 - **Badge counts** on the sidebar and tab counts on lists come from the API (`GET staff/navigation/badges`, `GET staff/{list}/counts`), not from the page. Counts over 999 show as "999+". On a new store every badge is hidden because every count is zero.
 - **Start with `*/screens/ComponentSheet.*.html`**: every button, input, badge, table row, note, dialog and nav item in each state. Build those components first.
 - Admin desktop has a 256px sidebar that collapses to 84px (see the "Collapsed sidebar" design). On phone, navigation moves into a menu sheet.
@@ -38,7 +44,7 @@ Index of every designed screen in this bundle. Each row is one design in light a
 ## Sellora Platform Admin
 <a id="platform"></a>
 
-Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggested host: `platform.<domain>`
+Folder `platform/` · 211 designs · Users: Sellora staff (landlord) · Suggested host: `platform.<domain>`
 
 ### Shared · Components
 
@@ -46,7 +52,7 @@ Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggeste
 |---|---|---|---|---|
 | Components · light and dark | Component sheet | `ComponentSheet.light.html` / `.dark.html` | every component in every state | none (build as components) |
 
-### Desktop · Overview, stores, plans, alerts and exchange rates
+### Desktop · Overview, stores, plans, billing, alerts and exchange rates
 
 | Design | Kind | Files | Design state | Suggested route |
 |---|---|---|---|---|
@@ -58,8 +64,24 @@ Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggeste
 | Store data exports | Screen | `StoreExports.light.html` / `.dark.html` | `storeExports` | `/store-exports` |
 | Plans | Screen | `Plans.light.html` / `.dark.html` | `plans` | `/plans` |
 | Plan editor | Screen | `PlanForm.light.html` / `.dark.html` | `planForm` | `/plan-form` |
+| Charges | Screen | `Charges.light.html` / `.dark.html` | `charges` | `/charges` |
+| Charge detail | Screen | `ChargeDetail.light.html` / `.dark.html` | `chargeDetail` | `/charge-detail` |
+| Promo codes | Screen | `PromoCodes.light.html` / `.dark.html` | `promoCodes` | `/promo-codes` |
+| Promo code editor | Screen | `PromoCodeForm.light.html` / `.dark.html` | `promoCodeForm` | `/promo-code-form` |
+| Billing providers | Screen | `BillingProviders.light.html` / `.dark.html` | `billingProviders` | `/billing-providers` |
 | Alerts | Screen | `Alerts.light.html` / `.dark.html` | `alerts` | `/alerts` |
 | Exchange rates | Screen | `ExchangeRates.light.html` / `.dark.html` | `exchangeRates` | `/exchange-rates` |
+
+### Desktop · Partners and payouts
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Partners | Screen | `Partners.light.html` / `.dark.html` | `partners` | `/partners` |
+| Partner detail | Screen | `PartnerDetail.light.html` / `.dark.html` | `partnerDetail` | `/partner-detail` |
+| Partner applications | Screen | `PartnerApplications.light.html` / `.dark.html` | `partnerApplications` | `/partner-applications` |
+| Partner payouts | Screen | `Payouts.light.html` / `.dark.html` | `payouts` | `/payouts` |
+| Payout run | Screen | `PayoutRun.light.html` / `.dark.html` | `payoutRun` | `/payout-run` |
+| Partner programme settings | Screen | `PartnerSettings.light.html` / `.dark.html` | `partnerSettings` | `/partner-settings` |
 
 ### Desktop · Legal documents, team and your account
 
@@ -81,11 +103,14 @@ Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggeste
 | Design | Kind | Files | Design state | Suggested route |
 |---|---|---|---|---|
 | Dialog · Search · on Dashboard | Dialog / sheet | `Search.light.html` / `.dark.html` | `dashboard` + `search` | `/` + `search` |
+| Dialog · Help · on Dashboard | Dialog / sheet | `Help.light.html` / `.dark.html` | `dashboard` + `help` | `/` + `help` |
+| Alert dialog · Your download has started · on Dashboard | Dialog / sheet | `Download.light.html` / `.dark.html` | `dashboard` + `download` | `/` + `download` |
 | Row actions · Kente Corner · on Stores | Menu | `StoresMenu.light.html` / `.dark.html` | `stores` + `storesMenu` | `/stores` + `storesMenu` |
 | Dialog · Filter stores · on Stores | Filters | `StoresFilters.light.html` / `.dark.html` | `stores` + `storesFilters` | `/stores` + `storesFilters` |
 | Alert dialog · Lift the suspension on Lagos Gadgets? · on Stores | Dialog / sheet | `LiftSuspension.light.html` / `.dark.html` | `stores` + `liftSuspension` | `/stores` + `liftSuspension` |
 | Alert dialog · Restore Abuja Books? · on Stores | Dialog / sheet | `RestoreStore.light.html` / `.dark.html` | `stores` + `restoreStore` | `/stores` + `restoreStore` |
 | Alert dialog · Retry setting up Bisi Wears? · on Stores | Dialog / sheet | `RetryProvisioning.light.html` / `.dark.html` | `stores` + `retryProvisioning` | `/stores` + `retryProvisioning` |
+| Alert dialog · Opens in a new tab · on Stores | Dialog / sheet | `OpenExternal.light.html` / `.dark.html` | `stores` + `openExternal` | `/stores` + `openExternal` |
 | Alert dialog · Suspend Ada's Fashion? · on Store detail | Dialog / sheet | `SuspendStore.light.html` / `.dark.html` | `storeDetail` + `suspendStore` | `/store-detail` + `suspendStore` |
 | Alert dialog · Close Ada's Fashion? · on Store detail | Dialog / sheet | `CloseStore.light.html` / `.dark.html` | `storeDetail` + `closeStore` | `/store-detail` + `closeStore` |
 | Alert dialog · Export Ada's Fashion's data? · on Store detail | Dialog / sheet | `ExportStore.light.html` / `.dark.html` | `storeDetail` + `exportStore` | `/store-detail` + `exportStore` |
@@ -99,10 +124,34 @@ Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggeste
 | Row actions · EXP-01JC2M · on Store data exports | Menu | `StoreExportsMenu.light.html` / `.dark.html` | `storeExports` + `storeExportsMenu` | `/store-exports` + `storeExportsMenu` |
 | Dialog · Export EXP-01JC2M · on Store data exports | Dialog / sheet | `ExportDetail.light.html` / `.dark.html` | `storeExports` + `exportDetail` | `/store-exports` + `exportDetail` |
 | Row actions · Growth · on Plans | Menu | `PlansMenu.light.html` / `.dark.html` | `plans` + `plansMenu` | `/plans` + `plansMenu` |
+| Alert dialog · Retire the Growth plan? · on Plans | Dialog / sheet | `RetirePlan.light.html` / `.dark.html` | `plans` + `retirePlan` | `/plans` + `retirePlan` |
+| Alert dialog · Move 412 stores to the new Growth prices? · on Plan editor | Dialog / sheet | `MoveSubscribers.light.html` / `.dark.html` | `planForm` + `moveSubscribers` | `/plan-form` + `moveSubscribers` |
+| Dialog · Add a price · on Plan editor | Dialog / sheet | `AddPlanPrice.light.html` / `.dark.html` | `planForm` + `addPlanPrice` | `/plan-form` + `addPlanPrice` |
+| Row actions · bil_01JD2R6P1Z · on Charges | Menu | `ChargesMenu.light.html` / `.dark.html` | `charges` + `chargesMenu` | `/charges` + `chargesMenu` |
+| Dialog · Filter charges · on Charges | Filters | `ChargesFilters.light.html` / `.dark.html` | `charges` + `chargesFilters` | `/charges` + `chargesFilters` |
+| Dialog · Refund Kente Corner · on Charges | Dialog / sheet | `RefundCharge.light.html` / `.dark.html` | `charges` + `refundCharge` | `/charges` + `refundCharge` |
+| Alert dialog · Check this charge with Paystack? · on Charge detail | Dialog / sheet | `CheckCharge.light.html` / `.dark.html` | `chargeDetail` + `checkCharge` | `/charge-detail` + `checkCharge` |
+| Row actions · TUNDE15 · on Promo codes | Menu | `PromoCodesMenu.light.html` / `.dark.html` | `promoCodes` + `promoCodesMenu` | `/promo-codes` + `promoCodesMenu` |
+| Alert dialog · Turn off TUNDE15? · on Promo codes | Dialog / sheet | `TurnOffCode.light.html` / `.dark.html` | `promoCodes` + `turnOffCode` | `/promo-codes` + `turnOffCode` |
 | Row actions · Store setup failed · on Alerts | Menu | `AlertsMenu.light.html` / `.dark.html` | `alerts` + `alertsMenu` | `/alerts` + `alertsMenu` |
 | Dialog · Filter alerts · on Alerts | Filters | `AlertsFilters.light.html` / `.dark.html` | `alerts` + `alertsFilters` | `/alerts` + `alertsFilters` |
 | Dialog · Resolve: Store setup failed · on Alerts | Dialog / sheet | `ResolveAlert.light.html` / `.dark.html` | `alerts` + `resolveAlert` | `/alerts` + `resolveAlert` |
+| Alert dialog · Acknowledge this alert? · on Alerts | Dialog / sheet | `AcknowledgeAlert.light.html` / `.dark.html` | `alerts` + `acknowledgeAlert` | `/alerts` + `acknowledgeAlert` |
 | Row actions · NGN · on Exchange rates | Menu | `RatesMenu.light.html` / `.dark.html` | `exchangeRates` + `ratesMenu` | `/exchange-rates` + `ratesMenu` |
+| Alert dialog · Copied · on Exchange rates | Dialog / sheet | `Copied.light.html` / `.dark.html` | `exchangeRates` + `copied` | `/exchange-rates` + `copied` |
+| Dialog · NGN rate history · on Exchange rates | Dialog / sheet | `RateHistory.light.html` / `.dark.html` | `exchangeRates` + `rateHistory` | `/exchange-rates` + `rateHistory` |
+
+### Desktop · Dialogs and menus: partners and payouts
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Row actions · Amaka Obi · on Partners | Menu | `PartnersMenu.light.html` / `.dark.html` | `partners` + `partnersMenu` | `/partners` + `partnersMenu` |
+| Alert dialog · Suspend Tunde Bakare? · on Partner detail | Dialog / sheet | `SuspendPartner.light.html` / `.dark.html` | `partnerDetail` + `suspendPartner` | `/partner-detail` + `suspendPartner` |
+| Dialog · Change Tunde Bakare's deal · on Partner detail | Dialog / sheet | `EditPartnerDeal.light.html` / `.dark.html` | `partnerDetail` + `editPartnerDeal` | `/partner-detail` + `editPartnerDeal` |
+| Row actions · Grace Wanjiru · on Partner applications | Menu | `ApplicationsMenu.light.html` / `.dark.html` | `partnerApplications` + `applicationsMenu` | `/partner-applications` + `applicationsMenu` |
+| Dialog · Approve Bola Adeyinka? · on Partner applications | Dialog / sheet | `ApprovePartner.light.html` / `.dark.html` | `partnerApplications` + `approvePartner` | `/partner-applications` + `approvePartner` |
+| Alert dialog · Reject Ifeanyi Okeke? · on Partner applications | Dialog / sheet | `RejectPartner.light.html` / `.dark.html` | `partnerApplications` + `rejectPartner` | `/partner-applications` + `rejectPartner` |
+| Dialog · Record payment to Tunde Bakare · on Payout run | Dialog / sheet | `RecordPayout.light.html` / `.dark.html` | `payoutRun` + `recordPayout` | `/payout-run` + `recordPayout` |
 
 ### Desktop · Dialogs and menus: legal and team
 
@@ -141,8 +190,9 @@ Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggeste
 | Accept invitation | Auth | `AuthInvite.light.html` / `.dark.html` | `invite` | `/auth/invite` |
 | Set up two-factor | Auth | `AuthTwoFactorSetup.light.html` / `.dark.html` | `twoFactorSetup` | `/auth/two-factor-setup` |
 | Save recovery codes | Auth | `AuthRecoveryCodes.light.html` / `.dark.html` | `recoveryCodes` | `/auth/recovery-codes` |
+| Terms and privacy | Auth | `AuthTerms.light.html` / `.dark.html` | `terms` | `/auth/terms` |
 
-### Phone · Overview, stores, plans, alerts and exchange rates
+### Phone · Overview, stores, plans, billing, alerts and exchange rates
 
 | Design | Kind | Files | Design state | Suggested route |
 |---|---|---|---|---|
@@ -153,8 +203,24 @@ Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggeste
 | Store data exports | Screen | `StoreExportsPhone.light.html` / `.dark.html` | `storeExports` | `/store-exports` |
 | Plans | Screen | `PlansPhone.light.html` / `.dark.html` | `plans` | `/plans` |
 | Plan editor | Screen | `PlanFormPhone.light.html` / `.dark.html` | `planForm` | `/plan-form` |
+| Charges | Screen | `ChargesPhone.light.html` / `.dark.html` | `charges` | `/charges` |
+| Charge detail | Screen | `ChargeDetailPhone.light.html` / `.dark.html` | `chargeDetail` | `/charge-detail` |
+| Promo codes | Screen | `PromoCodesPhone.light.html` / `.dark.html` | `promoCodes` | `/promo-codes` |
+| Promo code editor | Screen | `PromoCodeFormPhone.light.html` / `.dark.html` | `promoCodeForm` | `/promo-code-form` |
+| Billing providers | Screen | `BillingProvidersPhone.light.html` / `.dark.html` | `billingProviders` | `/billing-providers` |
 | Alerts | Screen | `AlertsPhone.light.html` / `.dark.html` | `alerts` | `/alerts` |
 | Exchange rates | Screen | `ExchangeRatesPhone.light.html` / `.dark.html` | `exchangeRates` | `/exchange-rates` |
+
+### Phone · Partners and payouts
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Partners | Screen | `PartnersPhone.light.html` / `.dark.html` | `partners` | `/partners` |
+| Partner detail | Screen | `PartnerDetailPhone.light.html` / `.dark.html` | `partnerDetail` | `/partner-detail` |
+| Partner applications | Screen | `PartnerApplicationsPhone.light.html` / `.dark.html` | `partnerApplications` | `/partner-applications` |
+| Partner payouts | Screen | `PayoutsPhone.light.html` / `.dark.html` | `payouts` | `/payouts` |
+| Payout run | Screen | `PayoutRunPhone.light.html` / `.dark.html` | `payoutRun` | `/payout-run` |
+| Partner programme settings | Screen | `PartnerSettingsPhone.light.html` / `.dark.html` | `partnerSettings` | `/partner-settings` |
 
 ### Phone · Legal documents, team and your account
 
@@ -177,11 +243,14 @@ Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggeste
 |---|---|---|---|---|
 | Menu drawer · Menu · on Dashboard | Dialog / sheet | `NavPhone.light.html` / `.dark.html` | `dashboard` + `nav` | `/` + `nav` |
 | Dialog · Search · on Dashboard | Dialog / sheet | `SearchPhone.light.html` / `.dark.html` | `dashboard` + `search` | `/` + `search` |
+| Dialog · Help · on Dashboard | Dialog / sheet | `HelpPhone.light.html` / `.dark.html` | `dashboard` + `help` | `/` + `help` |
+| Alert dialog · Your download has started · on Dashboard | Dialog / sheet | `DownloadPhone.light.html` / `.dark.html` | `dashboard` + `download` | `/` + `download` |
 | Row actions · Kente Corner · on Stores | Menu | `StoresMenuPhone.light.html` / `.dark.html` | `stores` + `storesMenu` | `/stores` + `storesMenu` |
 | Dialog · Filter stores · on Stores | Filters | `StoresFiltersPhone.light.html` / `.dark.html` | `stores` + `storesFilters` | `/stores` + `storesFilters` |
 | Alert dialog · Lift the suspension on Lagos Gadgets? · on Stores | Dialog / sheet | `LiftSuspensionPhone.light.html` / `.dark.html` | `stores` + `liftSuspension` | `/stores` + `liftSuspension` |
 | Alert dialog · Restore Abuja Books? · on Stores | Dialog / sheet | `RestoreStorePhone.light.html` / `.dark.html` | `stores` + `restoreStore` | `/stores` + `restoreStore` |
 | Alert dialog · Retry setting up Bisi Wears? · on Stores | Dialog / sheet | `RetryProvisioningPhone.light.html` / `.dark.html` | `stores` + `retryProvisioning` | `/stores` + `retryProvisioning` |
+| Alert dialog · Opens in a new tab · on Stores | Dialog / sheet | `OpenExternalPhone.light.html` / `.dark.html` | `stores` + `openExternal` | `/stores` + `openExternal` |
 | Alert dialog · Suspend Ada's Fashion? · on Store detail | Dialog / sheet | `SuspendStorePhone.light.html` / `.dark.html` | `storeDetail` + `suspendStore` | `/store-detail` + `suspendStore` |
 | Alert dialog · Close Ada's Fashion? · on Store detail | Dialog / sheet | `CloseStorePhone.light.html` / `.dark.html` | `storeDetail` + `closeStore` | `/store-detail` + `closeStore` |
 | Alert dialog · Export Ada's Fashion's data? · on Store detail | Dialog / sheet | `ExportStorePhone.light.html` / `.dark.html` | `storeDetail` + `exportStore` | `/store-detail` + `exportStore` |
@@ -195,10 +264,34 @@ Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggeste
 | Row actions · EXP-01JC2M · on Store data exports | Menu | `StoreExportsMenuPhone.light.html` / `.dark.html` | `storeExports` + `storeExportsMenu` | `/store-exports` + `storeExportsMenu` |
 | Dialog · Export EXP-01JC2M · on Store data exports | Dialog / sheet | `ExportDetailPhone.light.html` / `.dark.html` | `storeExports` + `exportDetail` | `/store-exports` + `exportDetail` |
 | Row actions · Growth · on Plans | Menu | `PlansMenuPhone.light.html` / `.dark.html` | `plans` + `plansMenu` | `/plans` + `plansMenu` |
+| Alert dialog · Retire the Growth plan? · on Plans | Dialog / sheet | `RetirePlanPhone.light.html` / `.dark.html` | `plans` + `retirePlan` | `/plans` + `retirePlan` |
+| Alert dialog · Move 412 stores to the new Growth prices? · on Plan editor | Dialog / sheet | `MoveSubscribersPhone.light.html` / `.dark.html` | `planForm` + `moveSubscribers` | `/plan-form` + `moveSubscribers` |
+| Dialog · Add a price · on Plan editor | Dialog / sheet | `AddPlanPricePhone.light.html` / `.dark.html` | `planForm` + `addPlanPrice` | `/plan-form` + `addPlanPrice` |
+| Row actions · bil_01JD2R6P1Z · on Charges | Menu | `ChargesMenuPhone.light.html` / `.dark.html` | `charges` + `chargesMenu` | `/charges` + `chargesMenu` |
+| Dialog · Filter charges · on Charges | Filters | `ChargesFiltersPhone.light.html` / `.dark.html` | `charges` + `chargesFilters` | `/charges` + `chargesFilters` |
+| Dialog · Refund Kente Corner · on Charges | Dialog / sheet | `RefundChargePhone.light.html` / `.dark.html` | `charges` + `refundCharge` | `/charges` + `refundCharge` |
+| Alert dialog · Check this charge with Paystack? · on Charge detail | Dialog / sheet | `CheckChargePhone.light.html` / `.dark.html` | `chargeDetail` + `checkCharge` | `/charge-detail` + `checkCharge` |
+| Row actions · TUNDE15 · on Promo codes | Menu | `PromoCodesMenuPhone.light.html` / `.dark.html` | `promoCodes` + `promoCodesMenu` | `/promo-codes` + `promoCodesMenu` |
+| Alert dialog · Turn off TUNDE15? · on Promo codes | Dialog / sheet | `TurnOffCodePhone.light.html` / `.dark.html` | `promoCodes` + `turnOffCode` | `/promo-codes` + `turnOffCode` |
 | Row actions · Store setup failed · on Alerts | Menu | `AlertsMenuPhone.light.html` / `.dark.html` | `alerts` + `alertsMenu` | `/alerts` + `alertsMenu` |
 | Dialog · Filter alerts · on Alerts | Filters | `AlertsFiltersPhone.light.html` / `.dark.html` | `alerts` + `alertsFilters` | `/alerts` + `alertsFilters` |
 | Dialog · Resolve: Store setup failed · on Alerts | Dialog / sheet | `ResolveAlertPhone.light.html` / `.dark.html` | `alerts` + `resolveAlert` | `/alerts` + `resolveAlert` |
+| Alert dialog · Acknowledge this alert? · on Alerts | Dialog / sheet | `AcknowledgeAlertPhone.light.html` / `.dark.html` | `alerts` + `acknowledgeAlert` | `/alerts` + `acknowledgeAlert` |
 | Row actions · NGN · on Exchange rates | Menu | `RatesMenuPhone.light.html` / `.dark.html` | `exchangeRates` + `ratesMenu` | `/exchange-rates` + `ratesMenu` |
+| Alert dialog · Copied · on Exchange rates | Dialog / sheet | `CopiedPhone.light.html` / `.dark.html` | `exchangeRates` + `copied` | `/exchange-rates` + `copied` |
+| Dialog · NGN rate history · on Exchange rates | Dialog / sheet | `RateHistoryPhone.light.html` / `.dark.html` | `exchangeRates` + `rateHistory` | `/exchange-rates` + `rateHistory` |
+
+### Phone · Dialogs and menus: partners and payouts
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Row actions · Amaka Obi · on Partners | Menu | `PartnersMenuPhone.light.html` / `.dark.html` | `partners` + `partnersMenu` | `/partners` + `partnersMenu` |
+| Alert dialog · Suspend Tunde Bakare? · on Partner detail | Dialog / sheet | `SuspendPartnerPhone.light.html` / `.dark.html` | `partnerDetail` + `suspendPartner` | `/partner-detail` + `suspendPartner` |
+| Dialog · Change Tunde Bakare's deal · on Partner detail | Dialog / sheet | `EditPartnerDealPhone.light.html` / `.dark.html` | `partnerDetail` + `editPartnerDeal` | `/partner-detail` + `editPartnerDeal` |
+| Row actions · Grace Wanjiru · on Partner applications | Menu | `ApplicationsMenuPhone.light.html` / `.dark.html` | `partnerApplications` + `applicationsMenu` | `/partner-applications` + `applicationsMenu` |
+| Dialog · Approve Bola Adeyinka? · on Partner applications | Dialog / sheet | `ApprovePartnerPhone.light.html` / `.dark.html` | `partnerApplications` + `approvePartner` | `/partner-applications` + `approvePartner` |
+| Alert dialog · Reject Ifeanyi Okeke? · on Partner applications | Dialog / sheet | `RejectPartnerPhone.light.html` / `.dark.html` | `partnerApplications` + `rejectPartner` | `/partner-applications` + `rejectPartner` |
+| Dialog · Record payment to Tunde Bakare · on Payout run | Dialog / sheet | `RecordPayoutPhone.light.html` / `.dark.html` | `payoutRun` + `recordPayout` | `/payout-run` + `recordPayout` |
 
 ### Phone · Dialogs and menus: legal and team
 
@@ -237,11 +330,104 @@ Folder `platform/` · 143 designs · Users: Sellora staff (landlord) · Suggeste
 | Accept invitation | Auth | `AuthInvitePhone.light.html` / `.dark.html` | `invite` | `/auth/invite` |
 | Set up two-factor | Auth | `AuthTwoFactorSetupPhone.light.html` / `.dark.html` | `twoFactorSetup` | `/auth/two-factor-setup` |
 | Save recovery codes | Auth | `AuthRecoveryCodesPhone.light.html` / `.dark.html` | `recoveryCodes` | `/auth/recovery-codes` |
+| Terms and privacy | Auth | `AuthTermsPhone.light.html` / `.dark.html` | `terms` | `/auth/terms` |
+
+## Sellora Partner Portal
+<a id="partner"></a>
+
+Folder `partner/` · 52 designs · Users: Approved partners (affiliates) · Suggested host: `partners.<domain>`
+
+### Shared · Components
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Components · light and dark | Component sheet | `ComponentSheet.light.html` / `.dark.html` | every component in every state | none (build as components) |
+
+### Desktop · Partner portal
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Partner home | Screen | `PtDashboard.light.html` / `.dark.html` | `ptDashboard` | `/pt-dashboard` |
+| Referred stores | Screen | `PtReferrals.light.html` / `.dark.html` | `ptReferrals` | `/pt-referrals` |
+| Commissions | Screen | `PtCommissions.light.html` / `.dark.html` | `ptCommissions` | `/pt-commissions` |
+| Your payouts | Screen | `PtPayouts.light.html` / `.dark.html` | `ptPayouts` | `/pt-payouts` |
+| Payout statement | Screen | `PtPayoutDetail.light.html` / `.dark.html` | `ptPayoutDetail` | `/pt-payout-detail` |
+| Links and codes | Screen | `PtLinks.light.html` / `.dark.html` | `ptLinks` | `/pt-links` |
+| Partner account | Screen | `PtAccount.light.html` / `.dark.html` | `ptAccount` | `/pt-account` |
+
+### Desktop · Dialogs and menus: partner portal
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Dialog · Help · on Partner home | Dialog / sheet | `PtHelp.light.html` / `.dark.html` | `ptDashboard` + `ptHelp` | `/pt-dashboard` + `ptHelp` |
+| Alert dialog · Your download has started · on Payout statement | Dialog / sheet | `PtDownload.light.html` / `.dark.html` | `ptPayoutDetail` + `ptDownload` | `/pt-payout-detail` + `ptDownload` |
+| Alert dialog · Copied · on Links and codes | Dialog / sheet | `PtCopied.light.html` / `.dark.html` | `ptLinks` + `ptCopied` | `/pt-links` + `ptCopied` |
+| Dialog · Change bank account · on Partner account | Dialog / sheet | `ChangePartnerBank.light.html` / `.dark.html` | `ptAccount` + `changePartnerBank` | `/pt-account` + `changePartnerBank` |
+| Alert dialog · Sign out? · on Partner account | Dialog / sheet | `PtSignOut.light.html` / `.dark.html` | `ptAccount` + `ptSignOut` | `/pt-account` + `ptSignOut` |
+| Dialog · Change password · on Partner account | Dialog / sheet | `PtChangePassword.light.html` / `.dark.html` | `ptAccount` + `ptChangePassword` | `/pt-account` + `ptChangePassword` |
+
+### Desktop · Apply, sign in and recovery
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Apply to become a partner | Auth | `AuthPtApply.light.html` / `.dark.html` | `ptApply` | `/auth/pt-apply` |
+| Confirm your email | Auth | `AuthPtApplySent.light.html` / `.dark.html` | `ptApplySent` | `/auth/pt-apply-sent` |
+| Application received | Auth | `AuthPtApplyReceived.light.html` / `.dark.html` | `ptApplyReceived` | `/auth/pt-apply-received` |
+| Programme terms | Auth | `AuthPtTerms.light.html` / `.dark.html` | `ptTerms` | `/auth/pt-terms` |
+| Approved: set your password | Auth | `AuthPtInvite.light.html` / `.dark.html` | `ptInvite` | `/auth/pt-invite` |
+| Set up two-step sign-in | Auth | `AuthPtTwoFactorSetup.light.html` / `.dark.html` | `ptTwoFactorSetup` | `/auth/pt-two-factor-setup` |
+| Save recovery codes | Auth | `AuthPtRecoveryCodes.light.html` / `.dark.html` | `ptRecoveryCodes` | `/auth/pt-recovery-codes` |
+| Sign in | Auth | `AuthPtSignin.light.html` / `.dark.html` | `ptSignin` | `/auth/pt-signin` |
+| Two-step code | Auth | `AuthPtTwoFactor.light.html` / `.dark.html` | `ptTwoFactor` | `/auth/pt-two-factor` |
+| Forgot password | Auth | `AuthPtForgot.light.html` / `.dark.html` | `ptForgot` | `/auth/pt-forgot` |
+| Reset link sent | Auth | `AuthPtForgotSent.light.html` / `.dark.html` | `ptForgotSent` | `/auth/pt-forgot-sent` |
+| New password | Auth | `AuthPtReset.light.html` / `.dark.html` | `ptReset` | `/auth/pt-reset` |
+
+### Phone · Partner portal
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Partner home | Screen | `PtDashboardPhone.light.html` / `.dark.html` | `ptDashboard` | `/pt-dashboard` |
+| Referred stores | Screen | `PtReferralsPhone.light.html` / `.dark.html` | `ptReferrals` | `/pt-referrals` |
+| Commissions | Screen | `PtCommissionsPhone.light.html` / `.dark.html` | `ptCommissions` | `/pt-commissions` |
+| Your payouts | Screen | `PtPayoutsPhone.light.html` / `.dark.html` | `ptPayouts` | `/pt-payouts` |
+| Payout statement | Screen | `PtPayoutDetailPhone.light.html` / `.dark.html` | `ptPayoutDetail` | `/pt-payout-detail` |
+| Links and codes | Screen | `PtLinksPhone.light.html` / `.dark.html` | `ptLinks` | `/pt-links` |
+| Partner account | Screen | `PtAccountPhone.light.html` / `.dark.html` | `ptAccount` | `/pt-account` |
+
+### Phone · Dialogs and menus: partner portal
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Menu drawer · Menu · on Partner home | Dialog / sheet | `PtNavPhone.light.html` / `.dark.html` | `ptDashboard` + `ptNav` | `/pt-dashboard` + `ptNav` |
+| Dialog · Help · on Partner home | Dialog / sheet | `PtHelpPhone.light.html` / `.dark.html` | `ptDashboard` + `ptHelp` | `/pt-dashboard` + `ptHelp` |
+| Alert dialog · Your download has started · on Payout statement | Dialog / sheet | `PtDownloadPhone.light.html` / `.dark.html` | `ptPayoutDetail` + `ptDownload` | `/pt-payout-detail` + `ptDownload` |
+| Alert dialog · Copied · on Links and codes | Dialog / sheet | `PtCopiedPhone.light.html` / `.dark.html` | `ptLinks` + `ptCopied` | `/pt-links` + `ptCopied` |
+| Dialog · Change bank account · on Partner account | Dialog / sheet | `ChangePartnerBankPhone.light.html` / `.dark.html` | `ptAccount` + `changePartnerBank` | `/pt-account` + `changePartnerBank` |
+| Alert dialog · Sign out? · on Partner account | Dialog / sheet | `PtSignOutPhone.light.html` / `.dark.html` | `ptAccount` + `ptSignOut` | `/pt-account` + `ptSignOut` |
+| Dialog · Change password · on Partner account | Dialog / sheet | `PtChangePasswordPhone.light.html` / `.dark.html` | `ptAccount` + `ptChangePassword` | `/pt-account` + `ptChangePassword` |
+
+### Phone · Apply, sign in and recovery
+
+| Design | Kind | Files | Design state | Suggested route |
+|---|---|---|---|---|
+| Apply to become a partner | Auth | `AuthPtApplyPhone.light.html` / `.dark.html` | `ptApply` | `/auth/pt-apply` |
+| Confirm your email | Auth | `AuthPtApplySentPhone.light.html` / `.dark.html` | `ptApplySent` | `/auth/pt-apply-sent` |
+| Application received | Auth | `AuthPtApplyReceivedPhone.light.html` / `.dark.html` | `ptApplyReceived` | `/auth/pt-apply-received` |
+| Programme terms | Auth | `AuthPtTermsPhone.light.html` / `.dark.html` | `ptTerms` | `/auth/pt-terms` |
+| Approved: set your password | Auth | `AuthPtInvitePhone.light.html` / `.dark.html` | `ptInvite` | `/auth/pt-invite` |
+| Set up two-step sign-in | Auth | `AuthPtTwoFactorSetupPhone.light.html` / `.dark.html` | `ptTwoFactorSetup` | `/auth/pt-two-factor-setup` |
+| Save recovery codes | Auth | `AuthPtRecoveryCodesPhone.light.html` / `.dark.html` | `ptRecoveryCodes` | `/auth/pt-recovery-codes` |
+| Sign in | Auth | `AuthPtSigninPhone.light.html` / `.dark.html` | `ptSignin` | `/auth/pt-signin` |
+| Two-step code | Auth | `AuthPtTwoFactorPhone.light.html` / `.dark.html` | `ptTwoFactor` | `/auth/pt-two-factor` |
+| Forgot password | Auth | `AuthPtForgotPhone.light.html` / `.dark.html` | `ptForgot` | `/auth/pt-forgot` |
+| Reset link sent | Auth | `AuthPtForgotSentPhone.light.html` / `.dark.html` | `ptForgotSent` | `/auth/pt-forgot-sent` |
+| New password | Auth | `AuthPtResetPhone.light.html` / `.dark.html` | `ptReset` | `/auth/pt-reset` |
 
 ## Sellora Store Admin · Desktop
 <a id="store-desktop"></a>
 
-Folder `store-desktop/` · 304 designs · Users: Store owners and staff (tenant) · Suggested host: `{store-host}/admin`
+Folder `store-desktop/` · 319 designs · Users: Store owners and staff (tenant) · Suggested host: `{store-host}/admin`
 
 ### Shared · Components
 
@@ -341,6 +527,11 @@ Folder `store-desktop/` · 304 designs · Users: Store owners and staff (tenant)
 | Bulk operation detail | Screen | `BulkOpDetail.light.html` / `.dark.html` | `bulkOpDetail` | `/bulk-op-detail` |
 | Store settings | Screen | `Settings.light.html` / `.dark.html` | `settings` | `/settings` |
 | Plan and billing | Screen | `Billing.light.html` / `.dark.html` | `billing` | `/billing` |
+| Plan and billing, payment failed | Screen | `BillingPastDue.light.html` / `.dark.html` | `billingPastDue` | `/billing-past-due` |
+| Plan and billing, store paused | Screen | `BillingSuspended.light.html` / `.dark.html` | `billingSuspended` | `/billing-suspended` |
+| Plan and billing, plan changing | Screen | `BillingChange.light.html` / `.dark.html` | `billingChange` | `/billing-change` |
+| Billing invoices | Screen | `BillingInvoices.light.html` / `.dark.html` | `billingInvoices` | `/billing-invoices` |
+| Billing invoice | Screen | `BillingInvoice.light.html` / `.dark.html` | `billingInvoice` | `/billing-invoice` |
 | Store data and closure | Screen | `StoreData.light.html` / `.dark.html` | `storeData` | `/store-data` |
 | Privacy requests | Screen | `PrivacyTools.light.html` / `.dark.html` | `privacyTools` | `/privacy-tools` |
 | Your account | Screen | `Profile.light.html` / `.dark.html` | `profile` | `/profile` |
@@ -351,6 +542,8 @@ Folder `store-desktop/` · 304 designs · Users: Store owners and staff (tenant)
 |---|---|---|---|---|
 | Dialog · Search · on Dashboard | Dialog / sheet | `Search.light.html` / `.dark.html` | `dashboard` + `search` | `/` + `search` |
 | Dialog · Become the owner of Ada's Fashion? · on Dashboard | Dialog / sheet | `AcceptTransfer.light.html` / `.dark.html` | `dashboard` + `acceptTransfer` | `/` + `acceptTransfer` |
+| Dialog · Help · on Dashboard | Dialog / sheet | `Help.light.html` / `.dark.html` | `dashboard` + `help` | `/` + `help` |
+| Alert dialog · Your download has started · on Dashboard | Dialog / sheet | `Download.light.html` / `.dark.html` | `dashboard` + `download` | `/` + `download` |
 | Row actions · Order #1047 · on Orders | Menu | `OrdersMenu.light.html` / `.dark.html` | `orders` + `ordersMenu` | `/orders` + `ordersMenu` |
 | Dialog · Bulk actions · on Orders | Dialog / sheet | `BulkOrders.light.html` / `.dark.html` | `orders` + `bulkOrders` | `/orders` + `bulkOrders` |
 | Dialog · Filter orders · on Orders | Filters | `OrderFilters.light.html` / `.dark.html` | `orders` + `orderFilters` | `/orders` + `orderFilters` |
@@ -369,6 +562,7 @@ Folder `store-desktop/` · 304 designs · Users: Store owners and staff (tenant)
 | Alert dialog · Move Leather sandals to trash? · on Products | Dialog / sheet | `DeleteProduct.light.html` / `.dark.html` | `products` + `deleteProduct` | `/products` + `deleteProduct` |
 | Dialog · Bulk edit products · on Products | Dialog / sheet | `BulkProducts.light.html` / `.dark.html` | `products` + `bulkProducts` | `/products` + `bulkProducts` |
 | Alert dialog · Restore Old print scarf? · on Products | Dialog / sheet | `RestoreProduct.light.html` / `.dark.html` | `products` + `restoreProduct` | `/products` + `restoreProduct` |
+| Alert dialog · Opens in a new tab · on Products | Dialog / sheet | `OpenExternal.light.html` / `.dark.html` | `products` + `openExternal` | `/products` + `openExternal` |
 | Row actions · Size M · on Product editor | Menu | `VariantRowMenu.light.html` / `.dark.html` | `productForm` + `variantRowMenu` | `/product-form` + `variantRowMenu` |
 | Dialog · Variant: Size M · on Product editor | Dialog / sheet | `EditVariant.light.html` / `.dark.html` | `productForm` + `editVariant` | `/product-form` + `editVariant` |
 | Dialog · Options · on Product editor | Dialog / sheet | `EditOptions.light.html` / `.dark.html` | `productForm` + `editOptions` | `/product-form` + `editOptions` |
@@ -447,6 +641,7 @@ Folder `store-desktop/` · 304 designs · Users: Store owners and staff (tenant)
 | Dialog · Generate codes · on Promotion detail | Dialog / sheet | `GenerateCodes.light.html` / `.dark.html` | `promotionDetail` + `generateCodes` | `/promotion-detail` + `generateCodes` |
 | Dialog · Edit code · on Promotion detail | Dialog / sheet | `EditCode.light.html` / `.dark.html` | `promotionDetail` + `editCode` | `/promotion-detail` + `editCode` |
 | Alert dialog · Deactivate Weekend flash sale? · on Promotion detail | Dialog / sheet | `DeactivatePromotion.light.html` / `.dark.html` | `promotionDetail` + `deactivatePromotion` | `/promotion-detail` + `deactivatePromotion` |
+| Alert dialog · Copied · on Promotion detail | Dialog / sheet | `Copied.light.html` / `.dark.html` | `promotionDetail` + `copied` | `/promotion-detail` + `copied` |
 | Row actions · R-0203 · on Returns | Menu | `ReturnsMenu.light.html` / `.dark.html` | `returns` + `returnsMenu` | `/returns` + `returnsMenu` |
 | Dialog · Filter returns · on Returns | Filters | `ReturnsFilters.light.html` / `.dark.html` | `returns` + `returnsFilters` | `/returns` + `returnsFilters` |
 | Dialog · Record inspection · on Return detail | Dialog / sheet | `InspectReturn.light.html` / `.dark.html` | `returnDetail` + `inspectReturn` | `/return-detail` + `inspectReturn` |
@@ -559,7 +754,13 @@ Folder `store-desktop/` · 304 designs · Users: Store owners and staff (tenant)
 | Alert dialog · Cancel this import? · on Import check | Dialog / sheet | `CancelImport.light.html` / `.dark.html` | `importPreview` + `cancelImport` | `/import-preview` + `cancelImport` |
 | Row actions · Fulfil orders · on Bulk operations | Menu | `BulkOpsMenu.light.html` / `.dark.html` | `bulkOps` + `bulkOpsMenu` | `/bulk-ops` + `bulkOpsMenu` |
 | Alert dialog · Require two-factor for all staff? · on Store settings | Dialog / sheet | `Require2FA.light.html` / `.dark.html` | `settings` + `require2FA` | `/settings` + `require2FA` |
-| Dialog · Choose a plan · on Plan and billing | Dialog / sheet | `UpgradePlan.light.html` / `.dark.html` | `billing` + `upgradePlan` | `/billing` + `upgradePlan` |
+| Dialog · Change plan · on Plan and billing | Dialog / sheet | `UpgradePlan.light.html` / `.dark.html` | `billing` + `upgradePlan` | `/billing` + `upgradePlan` |
+| Dialog · Move to Pro · on Plan and billing | Dialog / sheet | `ConfirmUpgrade.light.html` / `.dark.html` | `billing` + `confirmUpgrade` | `/billing` + `confirmUpgrade` |
+| Alert dialog · Move to Starter on 1 Dec 2026? · on Plan and billing | Dialog / sheet | `ConfirmDowngrade.light.html` / `.dark.html` | `billing` + `confirmDowngrade` | `/billing` + `confirmDowngrade` |
+| Alert dialog · Cancel your Growth plan? · on Plan and billing | Dialog / sheet | `CancelSubscription.light.html` / `.dark.html` | `billing` + `cancelSubscription` | `/billing` + `cancelSubscription` |
+| Dialog · Pay invoice SEL-2026-00151 · on Plan and billing, payment failed | Dialog / sheet | `PayNow.light.html` / `.dark.html` | `billingPastDue` + `payNow` | `/billing-past-due` + `payNow` |
+| Dialog · Update card · on Plan and billing, plan changing | Dialog / sheet | `UpdateCard.light.html` / `.dark.html` | `billingChange` + `updateCard` | `/billing-change` + `updateCard` |
+| Row actions · SEL-2026-00142 · on Billing invoices | Menu | `BillingInvoiceMenu.light.html` / `.dark.html` | `billingInvoices` + `billingInvoiceMenu` | `/billing-invoices` + `billingInvoiceMenu` |
 | Alert dialog · Close Ada's Fashion? · on Store data and closure | Dialog / sheet | `CloseStore.light.html` / `.dark.html` | `storeData` + `closeStore` | `/store-data` + `closeStore` |
 | Dialog · Export everything · on Store data and closure | Dialog / sheet | `ExportStore.light.html` / `.dark.html` | `storeData` + `exportStore` | `/store-data` + `exportStore` |
 | Alert dialog · Erase yetunde.alabi@example.com? · on Privacy requests | Dialog / sheet | `EraseGuest.light.html` / `.dark.html` | `privacyTools` + `eraseGuest` | `/privacy-tools` + `eraseGuest` |
@@ -605,7 +806,7 @@ Folder `store-desktop/` · 304 designs · Users: Store owners and staff (tenant)
 ## Sellora Store Admin · Phone
 <a id="store-phone"></a>
 
-Folder `store-phone/` · 304 designs · Users: Store owners and staff (tenant) · Suggested host: `{store-host}/admin` (same app, phone layout)
+Folder `store-phone/` · 319 designs · Users: Store owners and staff (tenant) · Suggested host: `{store-host}/admin` (same app, phone layout)
 
 ### Shared · Components
 
@@ -704,6 +905,11 @@ Folder `store-phone/` · 304 designs · Users: Store owners and staff (tenant) �
 | Bulk operation detail | Screen | `BulkOpDetailPhone.light.html` / `.dark.html` | `bulkOpDetail` | `/bulk-op-detail` |
 | Store settings | Screen | `SettingsPhone.light.html` / `.dark.html` | `settings` | `/settings` |
 | Plan and billing | Screen | `BillingPhone.light.html` / `.dark.html` | `billing` | `/billing` |
+| Plan and billing, payment failed | Screen | `BillingPastDuePhone.light.html` / `.dark.html` | `billingPastDue` | `/billing-past-due` |
+| Plan and billing, store paused | Screen | `BillingSuspendedPhone.light.html` / `.dark.html` | `billingSuspended` | `/billing-suspended` |
+| Plan and billing, plan changing | Screen | `BillingChangePhone.light.html` / `.dark.html` | `billingChange` | `/billing-change` |
+| Billing invoices | Screen | `BillingInvoicesPhone.light.html` / `.dark.html` | `billingInvoices` | `/billing-invoices` |
+| Billing invoice | Screen | `BillingInvoicePhone.light.html` / `.dark.html` | `billingInvoice` | `/billing-invoice` |
 | Store data and closure | Screen | `StoreDataPhone.light.html` / `.dark.html` | `storeData` | `/store-data` |
 | Privacy requests | Screen | `PrivacyToolsPhone.light.html` / `.dark.html` | `privacyTools` | `/privacy-tools` |
 | Your account | Screen | `ProfilePhone.light.html` / `.dark.html` | `profile` | `/profile` |
@@ -715,6 +921,8 @@ Folder `store-phone/` · 304 designs · Users: Store owners and staff (tenant) �
 | Menu drawer · Menu · on Dashboard | Dialog / sheet | `NavPhone.light.html` / `.dark.html` | `dashboard` + `nav` | `/` + `nav` |
 | Dialog · Search · on Dashboard | Dialog / sheet | `SearchPhone.light.html` / `.dark.html` | `dashboard` + `search` | `/` + `search` |
 | Dialog · Become the owner of Ada's Fashion? · on Dashboard | Dialog / sheet | `AcceptTransferPhone.light.html` / `.dark.html` | `dashboard` + `acceptTransfer` | `/` + `acceptTransfer` |
+| Dialog · Help · on Dashboard | Dialog / sheet | `HelpPhone.light.html` / `.dark.html` | `dashboard` + `help` | `/` + `help` |
+| Alert dialog · Your download has started · on Dashboard | Dialog / sheet | `DownloadPhone.light.html` / `.dark.html` | `dashboard` + `download` | `/` + `download` |
 | Row actions · Order #1047 · on Orders | Menu | `OrdersMenuPhone.light.html` / `.dark.html` | `orders` + `ordersMenu` | `/orders` + `ordersMenu` |
 | Dialog · Bulk actions · on Orders | Dialog / sheet | `BulkOrdersPhone.light.html` / `.dark.html` | `orders` + `bulkOrders` | `/orders` + `bulkOrders` |
 | Dialog · Filter orders · on Orders | Filters | `OrderFiltersPhone.light.html` / `.dark.html` | `orders` + `orderFilters` | `/orders` + `orderFilters` |
@@ -733,6 +941,7 @@ Folder `store-phone/` · 304 designs · Users: Store owners and staff (tenant) �
 | Alert dialog · Move Leather sandals to trash? · on Products | Dialog / sheet | `DeleteProductPhone.light.html` / `.dark.html` | `products` + `deleteProduct` | `/products` + `deleteProduct` |
 | Dialog · Bulk edit products · on Products | Dialog / sheet | `BulkProductsPhone.light.html` / `.dark.html` | `products` + `bulkProducts` | `/products` + `bulkProducts` |
 | Alert dialog · Restore Old print scarf? · on Products | Dialog / sheet | `RestoreProductPhone.light.html` / `.dark.html` | `products` + `restoreProduct` | `/products` + `restoreProduct` |
+| Alert dialog · Opens in a new tab · on Products | Dialog / sheet | `OpenExternalPhone.light.html` / `.dark.html` | `products` + `openExternal` | `/products` + `openExternal` |
 | Row actions · Size M · on Product editor | Menu | `VariantRowMenuPhone.light.html` / `.dark.html` | `productForm` + `variantRowMenu` | `/product-form` + `variantRowMenu` |
 | Dialog · Variant: Size M · on Product editor | Dialog / sheet | `EditVariantPhone.light.html` / `.dark.html` | `productForm` + `editVariant` | `/product-form` + `editVariant` |
 | Dialog · Options · on Product editor | Dialog / sheet | `EditOptionsPhone.light.html` / `.dark.html` | `productForm` + `editOptions` | `/product-form` + `editOptions` |
@@ -811,6 +1020,7 @@ Folder `store-phone/` · 304 designs · Users: Store owners and staff (tenant) �
 | Dialog · Generate codes · on Promotion detail | Dialog / sheet | `GenerateCodesPhone.light.html` / `.dark.html` | `promotionDetail` + `generateCodes` | `/promotion-detail` + `generateCodes` |
 | Dialog · Edit code · on Promotion detail | Dialog / sheet | `EditCodePhone.light.html` / `.dark.html` | `promotionDetail` + `editCode` | `/promotion-detail` + `editCode` |
 | Alert dialog · Deactivate Weekend flash sale? · on Promotion detail | Dialog / sheet | `DeactivatePromotionPhone.light.html` / `.dark.html` | `promotionDetail` + `deactivatePromotion` | `/promotion-detail` + `deactivatePromotion` |
+| Alert dialog · Copied · on Promotion detail | Dialog / sheet | `CopiedPhone.light.html` / `.dark.html` | `promotionDetail` + `copied` | `/promotion-detail` + `copied` |
 | Row actions · R-0203 · on Returns | Menu | `ReturnsMenuPhone.light.html` / `.dark.html` | `returns` + `returnsMenu` | `/returns` + `returnsMenu` |
 | Dialog · Filter returns · on Returns | Filters | `ReturnsFiltersPhone.light.html` / `.dark.html` | `returns` + `returnsFilters` | `/returns` + `returnsFilters` |
 | Dialog · Record inspection · on Return detail | Dialog / sheet | `InspectReturnPhone.light.html` / `.dark.html` | `returnDetail` + `inspectReturn` | `/return-detail` + `inspectReturn` |
@@ -923,7 +1133,13 @@ Folder `store-phone/` · 304 designs · Users: Store owners and staff (tenant) �
 | Alert dialog · Cancel this import? · on Import check | Dialog / sheet | `CancelImportPhone.light.html` / `.dark.html` | `importPreview` + `cancelImport` | `/import-preview` + `cancelImport` |
 | Row actions · Fulfil orders · on Bulk operations | Menu | `BulkOpsMenuPhone.light.html` / `.dark.html` | `bulkOps` + `bulkOpsMenu` | `/bulk-ops` + `bulkOpsMenu` |
 | Alert dialog · Require two-factor for all staff? · on Store settings | Dialog / sheet | `Require2FAPhone.light.html` / `.dark.html` | `settings` + `require2FA` | `/settings` + `require2FA` |
-| Dialog · Choose a plan · on Plan and billing | Dialog / sheet | `UpgradePlanPhone.light.html` / `.dark.html` | `billing` + `upgradePlan` | `/billing` + `upgradePlan` |
+| Dialog · Change plan · on Plan and billing | Dialog / sheet | `UpgradePlanPhone.light.html` / `.dark.html` | `billing` + `upgradePlan` | `/billing` + `upgradePlan` |
+| Dialog · Move to Pro · on Plan and billing | Dialog / sheet | `ConfirmUpgradePhone.light.html` / `.dark.html` | `billing` + `confirmUpgrade` | `/billing` + `confirmUpgrade` |
+| Alert dialog · Move to Starter on 1 Dec 2026? · on Plan and billing | Dialog / sheet | `ConfirmDowngradePhone.light.html` / `.dark.html` | `billing` + `confirmDowngrade` | `/billing` + `confirmDowngrade` |
+| Alert dialog · Cancel your Growth plan? · on Plan and billing | Dialog / sheet | `CancelSubscriptionPhone.light.html` / `.dark.html` | `billing` + `cancelSubscription` | `/billing` + `cancelSubscription` |
+| Dialog · Pay invoice SEL-2026-00151 · on Plan and billing, payment failed | Dialog / sheet | `PayNowPhone.light.html` / `.dark.html` | `billingPastDue` + `payNow` | `/billing-past-due` + `payNow` |
+| Dialog · Update card · on Plan and billing, plan changing | Dialog / sheet | `UpdateCardPhone.light.html` / `.dark.html` | `billingChange` + `updateCard` | `/billing-change` + `updateCard` |
+| Row actions · SEL-2026-00142 · on Billing invoices | Menu | `BillingInvoiceMenuPhone.light.html` / `.dark.html` | `billingInvoices` + `billingInvoiceMenu` | `/billing-invoices` + `billingInvoiceMenu` |
 | Alert dialog · Close Ada's Fashion? · on Store data and closure | Dialog / sheet | `CloseStorePhone.light.html` / `.dark.html` | `storeData` + `closeStore` | `/store-data` + `closeStore` |
 | Dialog · Export everything · on Store data and closure | Dialog / sheet | `ExportStorePhone.light.html` / `.dark.html` | `storeData` + `exportStore` | `/store-data` + `exportStore` |
 | Alert dialog · Erase yetunde.alabi@example.com? · on Privacy requests | Dialog / sheet | `EraseGuestPhone.light.html` / `.dark.html` | `privacyTools` + `eraseGuest` | `/privacy-tools` + `eraseGuest` |
